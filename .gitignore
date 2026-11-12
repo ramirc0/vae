@@ -223,4 +223,8 @@ __marimo__/
 .streamlit/secrets.toml
 
 # Project
-checkpoints/
+# Track only the epoch each notebook loads.
+checkpoints/*/*
+!checkpoints/neuron-glia/14.safetensors
+!checkpoints/fetal-adult/14.safetensors
+!checkpoints/cell-type-specific/10.safetensors

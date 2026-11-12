@@ -43,7 +43,7 @@ just edit notebooks/neuron_glia.py
 ```
 just run notebooks/neuron_glia.py --train
 ```
-* The notebook loads the epoch the original notebook used and writes the UMAP to `results/<model>/`.
+* The notebook loads the epoch the original notebook used and writes the UMAP to `results/<model>/`. The repository includes those three checkpoints, so the notebooks run without training. Training overwrites them.
 * Redraw the architecture diagram:
 ```
 uv run --extra gpu python scripts/architecture.py results/architecture.svg
