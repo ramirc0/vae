@@ -89,7 +89,7 @@ def plot_umap(embedding, labels, colors, path, axes=True):
         members = labels[name].to_numpy() == 1
         ax.scatter(
             *embedding[members].T,
-            s=0.1,
+            s=0.5,
             c=color,
             alpha=0.5,
             linewidths=0,
@@ -98,7 +98,7 @@ def plot_umap(embedding, labels, colors, path, axes=True):
         )
     if axes:
         ax.set(xlabel="UMAP 1", ylabel="UMAP 2")
-        ax.legend(loc="upper left", bbox_to_anchor=(1, 1), markerscale=10)
+        ax.legend(loc="upper left", bbox_to_anchor=(1, 1), markerscale=4)
         pk.fit_legend(fig)
         pk.despine(ax, offset=7.5)
     else:
