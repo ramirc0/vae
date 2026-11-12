@@ -1,11 +1,7 @@
-# Ubuntu's CUDA 12.0 libraries in /usr/lib shadow the pip CUDA 12.9 wheels,
-# which hides the GPUs from TensorFlow and breaks cuML.
-export LD_LIBRARY_PATH := `uv sync --extra gpu --quiet && ls -d "$PWD"/.venv/lib/python3*/site-packages/nvidia/*/lib | paste -sd: -`
-
 # Open a notebook in the marimo editor, e.g. `just edit notebooks/neuron_glia.py`.
 edit notebook:
     uv run --extra gpu marimo edit {{ notebook }}
 
-# Run a notebook top to bottom as a script.
-run notebook:
-    uv run --extra gpu python {{ notebook }}
+# Run a notebook top to bottom as a script. Add `--train` to fit the model first.
+run notebook *args:
+    uv run --extra gpu python {{ notebook }} {{ args }}
