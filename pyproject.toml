@@ -1,0 +1,45 @@
+[project]
+name = "vae"
+version = "0.1.0"
+description = "Variational autoencoder classifiers of brain cCRE subsets from Pratt et al. 2024"
+authors = [
+    { name = "Christian Ramirez", email = "christian.ramirez1@umassmed.edu" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "marimo",
+    "matplotlib",
+    "numpy",
+    "poikilos @ git+https://github.com/ramirc0/poikilos",
+    "polars>=2.1.0",
+    "pyfaidx",
+    "scikit-learn",
+    "tensorflow[and-cuda]",
+    "umap-learn",
+]
+
+[project.optional-dependencies]
+gpu = [
+    "cuml-cu12>=26.10",
+    # cuML caps numba<0.65, and numba 0.64 needs numpy<2.5.
+    "numpy<2.5",
+]
+
+[dependency-groups]
+dev = ["pytest", "ruff"]
+
+[build-system]
+requires = ["uv_build>=0.13.4,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.uv]
+exclude-newer = "7d"
+exclude-newer-package = { certifi = false }
+
+[tool.ruff.lint.per-file-ignores]
+# marimo renders a cell's last bare expression and ends every cell with return.
+"notebooks/*.py" = ["B018", "PLR1711"]
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules"
+testpaths = ["src"]
