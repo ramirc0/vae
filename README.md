@@ -1,12 +1,12 @@
 # vae
 
-PyTorch port of the variational autoencoder (VAE) classifiers of brain cCREs (b-cCREs) from Pratt et al. 2024.
+Variational autoencoder (VAE) classifiers of brain cCREs (b-cCREs) in PyTorch, based on the models of Pratt et al. 2024.
 
 ![VAE architecture](results/architecture.svg)
 
 ## Description
 
-Pratt et al. trained VAEs to show how well DNA sequence alone separates subsets of b-cCREs. Each model encodes 512 bp of one-hot DNA around a b-cCRE center into a 256-dimensional latent space. A classifier head on the sampled latent vector trains jointly with the reconstruction and KL losses. A UMAP of the latent means then shows how the classes separate. There are three models:
+Pratt et al. trained VAEs to show how well DNA sequence alone separates subsets of b-cCREs. Each model encodes 512 bp of one-hot DNA around a b-cCRE center into a 256-dimensional latent space. A classifier head on the latent vector trains jointly with the reconstruction and KL losses. A UMAP of the latent means of held-out b-cCREs then shows how the classes separate. There are three models:
 
 | Notebook | Classes |
 | --- | --- |
@@ -14,7 +14,25 @@ Pratt et al. trained VAEs to show how well DNA sequence alone separates subsets 
 | `notebooks/fetal_adult.py` | fetal, adult, shared |
 | `notebooks/cell_type_specific.py` | 7 Corces et al. 2020 brain cell types |
 
-The model and notebooks port Greg Andrews's TensorFlow 2.8 notebooks from the paper's [Zenodo record](https://zenodo.org/records/10605867) to PyTorch and marimo. The original 3-class heads end in a sigmoid and the 7-class head in a softmax. Keras trains both as softmax cross-entropy on the logits. Every head here returns logits and trains the same way. The shared code is in `src/vae/`. `model.py` holds the PyTorch model and its loss. `training.py` holds a plain training loop that mirrors Keras's `fit` with a 10% validation split. UMAP runs on the GPU with cuML when one is available.
+The model and notebooks start from Greg Andrews's TensorFlow 2.8 notebooks in the paper's [Zenodo record](https://zenodo.org/records/10605867). The model keeps the original layers and changes how it trains:
+
+* A ReLU follows every dense layer and every inner transposed convolution. In the original, these layers are linear.
+* Dropout of 0.5 precedes the first dense layer.
+* The decoder returns per-base logits. The loss is the negative ELBO per base (reconstruction cross-entropy plus KL) plus the classifier's softmax cross-entropy. The original summed MSE, the mean absolute KL and the classifier loss.
+* AdamW trains it with learning rate 3e-4, weight decay 0.1, batches of 128 and reverse-complement augmentation, for 30 epochs.
+* The notebook loads the epoch with the lowest validation classifier loss and draws the UMAP from the held-out rows only.
+
+The original setup overfits after about epoch 4. At the epochs it loads, the UMAP of all rows mostly separates memorized training rows. The validation split holds out the last 10% of rows, as Keras does: the tail of chr8, then chr9, chrX and chrY. On those rows, balanced accuracy is:
+
+| Model | Original setup, best epoch | This model | 6-mer logistic regression |
+| --- | --- | --- | --- |
+| neuron, glia, shared | 0.62 | 0.71 | 0.64 |
+| fetal, adult, shared | 0.65 | 0.70 | 0.62 |
+| 7 cell types | 0.29 | 0.43 | 0.39 |
+
+The decoder recovers little of the sequence, about 1.96 bits per base out of 2. DNA barely compresses, so the latent holds mostly the class and GC content.
+
+The shared code is in `src/vae/`. `model.py` holds the model and its loss. `training.py` holds the training loop and picks the epoch to load. `latent.py` draws the UMAP, on the GPU with cuML when one is available. `learning_curves.py` plots the metrics by epoch.
 
 ## Getting Started
 
@@ -43,7 +61,7 @@ just edit notebooks/neuron_glia.py
 ```
 just run notebooks/neuron_glia.py --train
 ```
-* The notebook loads the epoch the original notebook used and writes the UMAP to `results/<model>/`. The repository includes those three checkpoints, so the notebooks run without training. Training overwrites them.
+* The notebook loads the epoch with the lowest validation classifier loss and writes the UMAP of held-out rows to `results/<model>/`. The repository includes those three checkpoints, so the notebooks run without training. Training overwrites them, and it can pick a different epoch. Update the checkpoint exceptions in `.gitignore` when it does.
 * Redraw the architecture diagram:
 ```
 uv run --extra gpu python scripts/architecture.py results/architecture.svg

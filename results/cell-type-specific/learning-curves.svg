@@ -30,15 +30,15 @@ z
   <g id="axes_1">
    <g id="patch_2">
     <path d="M 23.62024 150.89976 
-L 175.004448 150.89976 
-L 175.004448 23.10024 
+L 176.104448 150.89976 
+L 176.104448 23.10024 
 L 23.62024 23.10024 
 z
 " style="fill: #ffffff"/>
    </g>
    <g id="line2d_1">
-    <path d="M 84.173923 150.89976 
-L 84.173923 23.10024 
+    <path d="M 89.69673 150.89976 
+L 89.69673 23.10024 
 " style="fill: none; stroke: #bfbfbf; stroke-width: 0.5; stroke-linecap: round"/>
    </g>
    <g id="matplotlib.axis_1">
@@ -65,14 +65,14 @@ L 0 -5
     <g id="xtick_2">
      <g id="line2d_3">
       <g>
-       <use xlink:href="#m5f1c306c63" x="53.897082" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m5f1c306c63" x="49.034275" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
      <g id="text_2">
-      <!-- $\mathdefault{2}$ -->
-      <g style="fill: #231f20" transform="translate(51.657082 168.04576)">
+      <!-- $\mathdefault{5}$ -->
+      <g style="fill: #231f20" transform="translate(46.794275 168.04576)">
        <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">2</tspan>
+        <tspan x="0" y="-0.421875" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">5</tspan>
        </text>
       </g>
      </g>
@@ -80,57 +80,12 @@ L 0 -5
     <g id="xtick_3">
      <g id="line2d_4">
       <g>
-       <use xlink:href="#m5f1c306c63" x="84.173923" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m5f1c306c63" x="74.448309" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
      <g id="text_3">
-      <!-- $\mathdefault{4}$ -->
-      <g style="fill: #231f20" transform="translate(81.933923 168.04576)">
-       <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">4</tspan>
-       </text>
-      </g>
-     </g>
-    </g>
-    <g id="xtick_4">
-     <g id="line2d_5">
-      <g>
-       <use xlink:href="#m5f1c306c63" x="114.450765" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
-      </g>
-     </g>
-     <g id="text_4">
-      <!-- $\mathdefault{6}$ -->
-      <g style="fill: #231f20" transform="translate(112.210765 168.04576)">
-       <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">6</tspan>
-       </text>
-      </g>
-     </g>
-    </g>
-    <g id="xtick_5">
-     <g id="line2d_6">
-      <g>
-       <use xlink:href="#m5f1c306c63" x="144.727606" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
-      </g>
-     </g>
-     <g id="text_5">
-      <!-- $\mathdefault{8}$ -->
-      <g style="fill: #231f20" transform="translate(142.487606 168.04576)">
-       <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">8</tspan>
-       </text>
-      </g>
-     </g>
-    </g>
-    <g id="xtick_6">
-     <g id="line2d_7">
-      <g>
-       <use xlink:href="#m5f1c306c63" x="175.004448" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
-      </g>
-     </g>
-     <g id="text_6">
       <!-- $\mathdefault{10}$ -->
-      <g style="fill: #231f20" transform="translate(170.524448 168.04576)">
+      <g style="fill: #231f20" transform="translate(69.968309 168.04576)">
        <text>
         <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">1</tspan>
         <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
@@ -138,13 +93,77 @@ L 0 -5
       </g>
      </g>
     </g>
-    <g id="text_7">
-     <text style="font-size: 10px; font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #231f20" x="99.312344" y="182.06976" transform="rotate(-0 99.312344 182.06976)">Epoch</text>
+    <g id="xtick_4">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m5f1c306c63" x="99.862344" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <!-- $\mathdefault{15}$ -->
+      <g style="fill: #231f20" transform="translate(95.382344 168.04576)">
+       <text>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">1</tspan>
+        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">5</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m5f1c306c63" x="125.276378" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <!-- $\mathdefault{20}$ -->
+      <g style="fill: #231f20" transform="translate(120.796378 168.04576)">
+       <text>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">2</tspan>
+        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#m5f1c306c63" x="150.690413" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <!-- $\mathdefault{25}$ -->
+      <g style="fill: #231f20" transform="translate(146.210413 168.04576)">
+       <text>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">2</tspan>
+        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">5</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m5f1c306c63" x="176.104448" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <!-- $\mathdefault{30}$ -->
+      <g style="fill: #231f20" transform="translate(171.624448 168.04576)">
+       <text>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">3</tspan>
+        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="text_8">
+     <text style="font-size: 10px; font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #231f20" x="99.862344" y="182.06976" transform="rotate(-0 99.862344 182.06976)">Epoch</text>
     </g>
    </g>
    <g id="matplotlib.axis_2">
     <g id="ytick_1">
-     <g id="line2d_8">
+     <g id="line2d_9">
       <defs>
        <path id="m659ce541e8" d="M 0 0 
 L 5 0 
@@ -154,94 +173,77 @@ L 5 0
        <use xlink:href="#m659ce541e8" x="16.12024" y="150.89976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
-     <g id="text_8">
-      <!-- $\mathdefault{0.5}$ -->
+     <g id="text_9">
+      <!-- $\mathdefault{2.2}$ -->
       <g style="fill: #231f20" transform="translate(3.00024 154.70776)">
        <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">2</tspan>
         <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
-        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">5</tspan>
+        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">2</tspan>
        </text>
       </g>
      </g>
     </g>
     <g id="ytick_2">
-     <g id="line2d_9">
+     <g id="line2d_10">
       <g>
-       <use xlink:href="#m659ce541e8" x="16.12024" y="129.59984" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m659ce541e8" x="16.12024" y="132.642686" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
-     <g id="text_9">
-      <!-- $\mathdefault{1.0}$ -->
-      <g style="fill: #231f20" transform="translate(3.00024 133.40784)">
+     <g id="text_10">
+      <!-- $\mathdefault{2.4}$ -->
+      <g style="fill: #231f20" transform="translate(3.00024 136.450686)">
        <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">1</tspan>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">2</tspan>
         <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
-        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
+        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">4</tspan>
        </text>
       </g>
      </g>
     </g>
     <g id="ytick_3">
-     <g id="line2d_10">
+     <g id="line2d_11">
       <g>
-       <use xlink:href="#m659ce541e8" x="16.12024" y="108.29992" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m659ce541e8" x="16.12024" y="114.385611" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
-     <g id="text_10">
-      <!-- $\mathdefault{1.5}$ -->
-      <g style="fill: #231f20" transform="translate(3.00024 112.10792)">
+     <g id="text_11">
+      <!-- $\mathdefault{2.6}$ -->
+      <g style="fill: #231f20" transform="translate(3.00024 118.193611)">
        <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">1</tspan>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">2</tspan>
         <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
-        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">5</tspan>
+        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">6</tspan>
        </text>
       </g>
      </g>
     </g>
     <g id="ytick_4">
-     <g id="line2d_11">
+     <g id="line2d_12">
       <g>
-       <use xlink:href="#m659ce541e8" x="16.12024" y="87" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m659ce541e8" x="16.12024" y="96.128537" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
-     <g id="text_11">
-      <!-- $\mathdefault{2.0}$ -->
-      <g style="fill: #231f20" transform="translate(3.00024 90.808)">
+     <g id="text_12">
+      <!-- $\mathdefault{2.8}$ -->
+      <g style="fill: #231f20" transform="translate(3.00024 99.936537)">
        <text>
         <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">2</tspan>
         <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
-        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
+        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">8</tspan>
        </text>
       </g>
      </g>
     </g>
     <g id="ytick_5">
-     <g id="line2d_12">
-      <g>
-       <use xlink:href="#m659ce541e8" x="16.12024" y="65.70008" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
-      </g>
-     </g>
-     <g id="text_12">
-      <!-- $\mathdefault{2.5}$ -->
-      <g style="fill: #231f20" transform="translate(3.00024 69.50808)">
-       <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">2</tspan>
-        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
-        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">5</tspan>
-       </text>
-      </g>
-     </g>
-    </g>
-    <g id="ytick_6">
      <g id="line2d_13">
       <g>
-       <use xlink:href="#m659ce541e8" x="16.12024" y="44.40016" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m659ce541e8" x="16.12024" y="77.871463" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
      <g id="text_13">
       <!-- $\mathdefault{3.0}$ -->
-      <g style="fill: #231f20" transform="translate(3.00024 48.20816)">
+      <g style="fill: #231f20" transform="translate(3.00024 81.679463)">
        <text>
         <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">3</tspan>
         <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
@@ -250,48 +252,122 @@ L 5 0
       </g>
      </g>
     </g>
-    <g id="ytick_7">
+    <g id="ytick_6">
      <g id="line2d_14">
+      <g>
+       <use xlink:href="#m659ce541e8" x="16.12024" y="59.614389" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <!-- $\mathdefault{3.2}$ -->
+      <g style="fill: #231f20" transform="translate(3.00024 63.422389)">
+       <text>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">3</tspan>
+        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
+        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">2</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#m659ce541e8" x="16.12024" y="41.357314" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <!-- $\mathdefault{3.4}$ -->
+      <g style="fill: #231f20" transform="translate(3.00024 45.165314)">
+       <text>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">3</tspan>
+        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
+        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">4</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_16">
       <g>
        <use xlink:href="#m659ce541e8" x="16.12024" y="23.10024" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
-     <g id="text_14">
-      <!-- $\mathdefault{3.5}$ -->
+     <g id="text_16">
+      <!-- $\mathdefault{3.6}$ -->
       <g style="fill: #231f20" transform="translate(3.00024 26.90824)">
        <text>
         <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">3</tspan>
         <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
-        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">5</tspan>
+        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">6</tspan>
        </text>
       </g>
      </g>
     </g>
    </g>
-   <g id="line2d_15">
-    <path d="M 38.758661 74.780997 
-L 53.897082 85.678374 
-L 69.035502 92.964461 
-L 84.173923 98.202425 
-L 99.312344 103.586889 
-L 114.450765 110.59687 
-L 129.589185 118.406596 
-L 144.727606 126.072636 
-L 159.866027 132.617662 
-L 175.004448 138.169864 
+   <g id="line2d_17">
+    <path d="M 28.703047 39.78446 
+L 33.785854 58.668476 
+L 38.868661 72.557702 
+L 43.951468 80.649994 
+L 49.034275 87.12881 
+L 54.117082 92.40219 
+L 59.199888 96.420365 
+L 64.282695 99.538931 
+L 69.365502 105.269303 
+L 74.448309 109.87975 
+L 79.531116 112.783202 
+L 84.613923 115.280381 
+L 89.69673 118.372315 
+L 94.779537 120.004655 
+L 99.862344 122.678532 
+L 104.945151 124.226161 
+L 110.027958 126.267061 
+L 115.110765 128.286012 
+L 120.193571 129.49434 
+L 125.276378 132.436791 
+L 130.359185 134.007125 
+L 135.441992 136.023313 
+L 140.524799 137.742157 
+L 145.607606 139.39826 
+L 150.690413 141.376549 
+L 155.77322 142.608402 
+L 160.856027 144.492094 
+L 165.938834 146.271844 
+L 171.021641 146.820432 
+L 176.104448 148.904067 
 " style="fill: none; stroke: #231f20; stroke-width: 0.5; stroke-linecap: round"/>
    </g>
-   <g id="line2d_16">
-    <path d="M 38.758661 79.970014 
-L 53.897082 91.091713 
-L 69.035502 94.383714 
-L 84.173923 96.136667 
-L 99.312344 93.739116 
-L 114.450765 86.95871 
-L 129.589185 81.31723 
-L 144.727606 70.863311 
-L 159.866027 56.79526 
-L 175.004448 43.436263 
+   <g id="line2d_18">
+    <path d="M 28.703047 63.853357 
+L 33.785854 68.186383 
+L 38.868661 83.178987 
+L 43.951468 89.535501 
+L 49.034275 94.168901 
+L 54.117082 96.635606 
+L 59.199888 101.491707 
+L 64.282695 103.093006 
+L 69.365502 108.153039 
+L 74.448309 107.644703 
+L 79.531116 111.266407 
+L 84.613923 113.181094 
+L 89.69673 113.099123 
+L 94.779537 111.732641 
+L 99.862344 112.661127 
+L 104.945151 112.070747 
+L 110.027958 111.407209 
+L 115.110765 109.607271 
+L 120.193571 112.96138 
+L 125.276378 112.309546 
+L 130.359185 111.119874 
+L 135.441992 110.816975 
+L 140.524799 109.657702 
+L 145.607606 111.475753 
+L 150.690413 109.302211 
+L 155.77322 108.34925 
+L 160.856027 103.371917 
+L 165.938834 110.874641 
+L 171.021641 107.826126 
+L 176.104448 109.10685 
 " style="fill: none; stroke-dasharray: 2,1; stroke-dashoffset: 0; stroke: #ed1c24; stroke-width: 0.5"/>
    </g>
    <g id="patch_3">
@@ -301,112 +377,67 @@ L 16.12024 23.10024
    </g>
    <g id="patch_4">
     <path d="M 23.62024 158.39976 
-L 175.004448 158.39976 
+L 176.104448 158.39976 
 " style="fill: none; stroke: #231f20; stroke-width: 0.75; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
-   <g id="text_15">
-    <text style="font-weight: 500; font-size: 12px; font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #231f20" x="99.312344" y="14.70024" transform="rotate(-0 99.312344 14.70024)">loss</text>
+   <g id="text_17">
+    <text style="font-weight: 500; font-size: 12px; font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #231f20" x="99.862344" y="14.70024" transform="rotate(-0 99.862344 14.70024)">loss</text>
    </g>
   </g>
   <g id="axes_2">
    <g id="patch_5">
-    <path d="M 210.584927 150.89976 
-L 361.969135 150.89976 
-L 361.969135 23.10024 
-L 210.584927 23.10024 
+    <path d="M 211.684928 150.89976 
+L 364.169135 150.89976 
+L 364.169135 23.10024 
+L 211.684928 23.10024 
 z
 " style="fill: #ffffff"/>
    </g>
-   <g id="line2d_17">
-    <path d="M 271.13861 150.89976 
-L 271.13861 23.10024 
+   <g id="line2d_19">
+    <path d="M 277.761417 150.89976 
+L 277.761417 23.10024 
 " style="fill: none; stroke: #bfbfbf; stroke-width: 0.5; stroke-linecap: round"/>
    </g>
    <g id="matplotlib.axis_3">
-    <g id="xtick_7">
-     <g id="line2d_18">
+    <g id="xtick_8">
+     <g id="line2d_20">
       <g>
-       <use xlink:href="#m5f1c306c63" x="210.584927" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m5f1c306c63" x="211.684928" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
-     <g id="text_16">
+     <g id="text_18">
       <!-- $\mathdefault{0}$ -->
-      <g style="fill: #231f20" transform="translate(208.344927 168.04576)">
+      <g style="fill: #231f20" transform="translate(209.444928 168.04576)">
        <text>
         <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
        </text>
       </g>
      </g>
     </g>
-    <g id="xtick_8">
-     <g id="line2d_19">
-      <g>
-       <use xlink:href="#m5f1c306c63" x="240.861769" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
-      </g>
-     </g>
-     <g id="text_17">
-      <!-- $\mathdefault{2}$ -->
-      <g style="fill: #231f20" transform="translate(238.621769 168.04576)">
-       <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">2</tspan>
-       </text>
-      </g>
-     </g>
-    </g>
     <g id="xtick_9">
-     <g id="line2d_20">
+     <g id="line2d_21">
       <g>
-       <use xlink:href="#m5f1c306c63" x="271.13861" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m5f1c306c63" x="237.098962" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
-     <g id="text_18">
-      <!-- $\mathdefault{4}$ -->
-      <g style="fill: #231f20" transform="translate(268.89861 168.04576)">
+     <g id="text_19">
+      <!-- $\mathdefault{5}$ -->
+      <g style="fill: #231f20" transform="translate(234.858962 168.04576)">
        <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">4</tspan>
+        <tspan x="0" y="-0.421875" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">5</tspan>
        </text>
       </g>
      </g>
     </g>
     <g id="xtick_10">
-     <g id="line2d_21">
-      <g>
-       <use xlink:href="#m5f1c306c63" x="301.415452" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
-      </g>
-     </g>
-     <g id="text_19">
-      <!-- $\mathdefault{6}$ -->
-      <g style="fill: #231f20" transform="translate(299.175452 168.04576)">
-       <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">6</tspan>
-       </text>
-      </g>
-     </g>
-    </g>
-    <g id="xtick_11">
      <g id="line2d_22">
       <g>
-       <use xlink:href="#m5f1c306c63" x="331.692293" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m5f1c306c63" x="262.512997" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
      <g id="text_20">
-      <!-- $\mathdefault{8}$ -->
-      <g style="fill: #231f20" transform="translate(329.452293 168.04576)">
-       <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">8</tspan>
-       </text>
-      </g>
-     </g>
-    </g>
-    <g id="xtick_12">
-     <g id="line2d_23">
-      <g>
-       <use xlink:href="#m5f1c306c63" x="361.969135" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
-      </g>
-     </g>
-     <g id="text_21">
       <!-- $\mathdefault{10}$ -->
-      <g style="fill: #231f20" transform="translate(357.489135 168.04576)">
+      <g style="fill: #231f20" transform="translate(258.032997 168.04576)">
        <text>
         <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">1</tspan>
         <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
@@ -414,20 +445,102 @@ L 271.13861 23.10024
       </g>
      </g>
     </g>
-    <g id="text_22">
-     <text style="font-size: 10px; font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #231f20" x="286.277031" y="182.06976" transform="rotate(-0 286.277031 182.06976)">Epoch</text>
+    <g id="xtick_11">
+     <g id="line2d_23">
+      <g>
+       <use xlink:href="#m5f1c306c63" x="287.927031" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+      </g>
+     </g>
+     <g id="text_21">
+      <!-- $\mathdefault{15}$ -->
+      <g style="fill: #231f20" transform="translate(283.447031 168.04576)">
+       <text>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">1</tspan>
+        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">5</tspan>
+       </text>
+      </g>
+     </g>
     </g>
-   </g>
-   <g id="matplotlib.axis_4">
-    <g id="ytick_8">
+    <g id="xtick_12">
      <g id="line2d_24">
       <g>
-       <use xlink:href="#m659ce541e8" x="203.084927" y="150.89976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m5f1c306c63" x="313.341066" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+      </g>
+     </g>
+     <g id="text_22">
+      <!-- $\mathdefault{20}$ -->
+      <g style="fill: #231f20" transform="translate(308.861066 168.04576)">
+       <text>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">2</tspan>
+        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_13">
+     <g id="line2d_25">
+      <g>
+       <use xlink:href="#m5f1c306c63" x="338.7551" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
      <g id="text_23">
+      <!-- $\mathdefault{25}$ -->
+      <g style="fill: #231f20" transform="translate(334.2751 168.04576)">
+       <text>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">2</tspan>
+        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">5</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_14">
+     <g id="line2d_26">
+      <g>
+       <use xlink:href="#m5f1c306c63" x="364.169135" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+      </g>
+     </g>
+     <g id="text_24">
+      <!-- $\mathdefault{30}$ -->
+      <g style="fill: #231f20" transform="translate(359.689135 168.04576)">
+       <text>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">3</tspan>
+        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="text_25">
+     <text style="font-size: 10px; font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #231f20" x="287.927031" y="182.06976" transform="rotate(-0 287.927031 182.06976)">Epoch</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_9">
+     <g id="line2d_27">
+      <g>
+       <use xlink:href="#m659ce541e8" x="204.184928" y="150.89976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+      </g>
+     </g>
+     <g id="text_26">
+      <!-- $\mathdefault{0.02}$ -->
+      <g style="fill: #231f20" transform="translate(186.584928 154.70776)">
+       <text>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
+        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
+        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
+        <tspan x="11.119843" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">2</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_28">
+      <g>
+       <use xlink:href="#m659ce541e8" x="204.184928" y="125.339856" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+      </g>
+     </g>
+     <g id="text_27">
       <!-- $\mathdefault{0.04}$ -->
-      <g style="fill: #231f20" transform="translate(185.484927 154.70776)">
+      <g style="fill: #231f20" transform="translate(186.584928 129.147856)">
        <text>
         <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
         <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
@@ -437,15 +550,15 @@ L 271.13861 23.10024
       </g>
      </g>
     </g>
-    <g id="ytick_9">
-     <g id="line2d_25">
+    <g id="ytick_11">
+     <g id="line2d_29">
       <g>
-       <use xlink:href="#m659ce541e8" x="203.084927" y="125.339856" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m659ce541e8" x="204.184928" y="99.779952" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
-     <g id="text_24">
+     <g id="text_28">
       <!-- $\mathdefault{0.06}$ -->
-      <g style="fill: #231f20" transform="translate(185.484927 129.147856)">
+      <g style="fill: #231f20" transform="translate(186.584928 103.587952)">
        <text>
         <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
         <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
@@ -455,15 +568,15 @@ L 271.13861 23.10024
       </g>
      </g>
     </g>
-    <g id="ytick_10">
-     <g id="line2d_26">
+    <g id="ytick_12">
+     <g id="line2d_30">
       <g>
-       <use xlink:href="#m659ce541e8" x="203.084927" y="99.779952" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m659ce541e8" x="204.184928" y="74.220048" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
-     <g id="text_25">
+     <g id="text_29">
       <!-- $\mathdefault{0.08}$ -->
-      <g style="fill: #231f20" transform="translate(185.484927 103.587952)">
+      <g style="fill: #231f20" transform="translate(186.584928 78.028048)">
        <text>
         <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
         <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
@@ -473,15 +586,15 @@ L 271.13861 23.10024
       </g>
      </g>
     </g>
-    <g id="ytick_11">
-     <g id="line2d_27">
+    <g id="ytick_13">
+     <g id="line2d_31">
       <g>
-       <use xlink:href="#m659ce541e8" x="203.084927" y="74.220048" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m659ce541e8" x="204.184928" y="48.660144" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
-     <g id="text_26">
+     <g id="text_30">
       <!-- $\mathdefault{0.10}$ -->
-      <g style="fill: #231f20" transform="translate(185.484927 78.028048)">
+      <g style="fill: #231f20" transform="translate(186.584928 52.468144)">
        <text>
         <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
         <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
@@ -491,15 +604,15 @@ L 271.13861 23.10024
       </g>
      </g>
     </g>
-    <g id="ytick_12">
-     <g id="line2d_28">
+    <g id="ytick_14">
+     <g id="line2d_32">
       <g>
-       <use xlink:href="#m659ce541e8" x="203.084927" y="48.660144" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m659ce541e8" x="204.184928" y="23.10024" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
-     <g id="text_27">
+     <g id="text_31">
       <!-- $\mathdefault{0.12}$ -->
-      <g style="fill: #231f20" transform="translate(185.484927 52.468144)">
+      <g style="fill: #231f20" transform="translate(186.584928 26.90824)">
        <text>
         <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
         <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
@@ -509,164 +622,141 @@ L 271.13861 23.10024
       </g>
      </g>
     </g>
-    <g id="ytick_13">
-     <g id="line2d_29">
-      <g>
-       <use xlink:href="#m659ce541e8" x="203.084927" y="23.10024" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
-      </g>
-     </g>
-     <g id="text_28">
-      <!-- $\mathdefault{0.14}$ -->
-      <g style="fill: #231f20" transform="translate(185.484927 26.90824)">
-       <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
-        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
-        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">1</tspan>
-        <tspan x="11.119843" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">4</tspan>
-       </text>
-      </g>
-     </g>
-    </g>
    </g>
-   <g id="line2d_30">
-    <path d="M 225.723348 76.290342 
-L 240.861769 123.197372 
-L 256.00019 145.67197 
-L 271.13861 142.645354 
-L 286.277031 125.586601 
-L 301.415452 102.413783 
-L 316.553873 78.369052 
-L 331.692293 58.294707 
-L 346.830714 45.194041 
-L 361.969135 35.218551 
+   <g id="line2d_33">
+    <path d="M 216.767734 44.692162 
+L 221.850541 95.346969 
+L 226.933348 131.119334 
+L 232.016155 137.61217 
+L 237.098962 133.671332 
+L 242.181769 131.131557 
+L 247.264576 129.09038 
+L 252.347383 127.133732 
+L 257.43019 120.910224 
+L 262.512997 119.268627 
+L 267.595804 118.720792 
+L 272.67861 118.888919 
+L 277.761417 118.654605 
+L 282.844224 119.642726 
+L 287.927031 119.048902 
+L 293.009838 120.422632 
+L 298.092645 120.062616 
+L 303.175452 121.228363 
+L 308.258259 122.707291 
+L 313.341066 122.610667 
+L 318.423873 123.265692 
+L 323.50668 123.830561 
+L 328.589487 123.789501 
+L 333.672293 124.557967 
+L 338.7551 124.903966 
+L 343.837907 125.608021 
+L 348.920714 125.488461 
+L 354.003521 126.138463 
+L 359.086328 126.402794 
+L 364.169135 126.590769 
 " style="fill: none; stroke: #231f20; stroke-width: 0.5; stroke-linecap: round"/>
    </g>
-   <g id="line2d_31">
-    <path d="M 225.723348 84.905816 
-L 240.861769 132.686914 
-L 256.00019 149.291544 
-L 271.13861 141.406266 
-L 286.277031 134.641543 
-L 301.415452 97.219738 
-L 316.553873 99.878233 
-L 331.692293 89.495055 
-L 346.830714 75.197277 
-L 361.969135 67.565936 
+   <g id="line2d_34">
+    <path d="M 216.767734 83.442821 
+L 221.850541 110.780408 
+L 226.933348 145.852186 
+L 232.016155 143.502063 
+L 237.098962 134.457039 
+L 242.181769 130.904324 
+L 247.264576 124.764078 
+L 252.347383 128.309963 
+L 257.43019 128.907114 
+L 262.512997 114.094904 
+L 267.595804 123.298939 
+L 272.67861 126.729642 
+L 277.761417 120.170633 
+L 282.844224 122.31101 
+L 287.927031 117.121121 
+L 293.009838 124.479782 
+L 298.092645 128.745622 
+L 303.175452 124.55378 
+L 308.258259 133.107534 
+L 313.341066 128.211512 
+L 318.423873 127.244154 
+L 323.50668 124.177911 
+L 328.589487 129.283992 
+L 333.672293 128.409976 
+L 338.7551 130.982369 
+L 343.837907 128.556033 
+L 348.920714 124.333932 
+L 354.003521 131.925318 
+L 359.086328 132.506424 
+L 364.169135 131.554647 
 " style="fill: none; stroke-dasharray: 2,1; stroke-dashoffset: 0; stroke: #ed1c24; stroke-width: 0.5"/>
    </g>
    <g id="patch_6">
-    <path d="M 203.084927 150.89976 
-L 203.084927 23.10024 
+    <path d="M 204.184928 150.89976 
+L 204.184928 23.10024 
 " style="fill: none; stroke: #231f20; stroke-width: 0.75; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
    <g id="patch_7">
-    <path d="M 210.584927 158.39976 
-L 361.969135 158.39976 
+    <path d="M 211.684928 158.39976 
+L 364.169135 158.39976 
 " style="fill: none; stroke: #231f20; stroke-width: 0.75; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
-   <g id="text_29">
-    <text style="font-weight: 500; font-size: 12px; font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #231f20" x="286.277031" y="14.70024" transform="rotate(-0 286.277031 14.70024)">kl_div_loss</text>
+   <g id="text_32">
+    <text style="font-weight: 500; font-size: 12px; font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #231f20" x="287.927031" y="14.70024" transform="rotate(-0 287.927031 14.70024)">kl_div_loss</text>
    </g>
   </g>
   <g id="axes_3">
    <g id="patch_8">
-    <path d="M 406.429615 150.89976 
-L 557.813823 150.89976 
-L 557.813823 23.10024 
-L 406.429615 23.10024 
+    <path d="M 404.229615 150.89976 
+L 556.713823 150.89976 
+L 556.713823 23.10024 
+L 404.229615 23.10024 
 z
 " style="fill: #ffffff"/>
    </g>
-   <g id="line2d_32">
-    <path d="M 466.983298 150.89976 
-L 466.983298 23.10024 
+   <g id="line2d_35">
+    <path d="M 470.306105 150.89976 
+L 470.306105 23.10024 
 " style="fill: none; stroke: #bfbfbf; stroke-width: 0.5; stroke-linecap: round"/>
    </g>
    <g id="matplotlib.axis_5">
-    <g id="xtick_13">
-     <g id="line2d_33">
+    <g id="xtick_15">
+     <g id="line2d_36">
       <g>
-       <use xlink:href="#m5f1c306c63" x="406.429615" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m5f1c306c63" x="404.229615" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
-     <g id="text_30">
+     <g id="text_33">
       <!-- $\mathdefault{0}$ -->
-      <g style="fill: #231f20" transform="translate(404.189615 168.04576)">
+      <g style="fill: #231f20" transform="translate(401.989615 168.04576)">
        <text>
         <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
-       </text>
-      </g>
-     </g>
-    </g>
-    <g id="xtick_14">
-     <g id="line2d_34">
-      <g>
-       <use xlink:href="#m5f1c306c63" x="436.706456" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
-      </g>
-     </g>
-     <g id="text_31">
-      <!-- $\mathdefault{2}$ -->
-      <g style="fill: #231f20" transform="translate(434.466456 168.04576)">
-       <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">2</tspan>
-       </text>
-      </g>
-     </g>
-    </g>
-    <g id="xtick_15">
-     <g id="line2d_35">
-      <g>
-       <use xlink:href="#m5f1c306c63" x="466.983298" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
-      </g>
-     </g>
-     <g id="text_32">
-      <!-- $\mathdefault{4}$ -->
-      <g style="fill: #231f20" transform="translate(464.743298 168.04576)">
-       <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">4</tspan>
        </text>
       </g>
      </g>
     </g>
     <g id="xtick_16">
-     <g id="line2d_36">
+     <g id="line2d_37">
       <g>
-       <use xlink:href="#m5f1c306c63" x="497.260139" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m5f1c306c63" x="429.64365" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
-     <g id="text_33">
-      <!-- $\mathdefault{6}$ -->
-      <g style="fill: #231f20" transform="translate(495.020139 168.04576)">
+     <g id="text_34">
+      <!-- $\mathdefault{5}$ -->
+      <g style="fill: #231f20" transform="translate(427.40365 168.04576)">
        <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">6</tspan>
+        <tspan x="0" y="-0.421875" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">5</tspan>
        </text>
       </g>
      </g>
     </g>
     <g id="xtick_17">
-     <g id="line2d_37">
-      <g>
-       <use xlink:href="#m5f1c306c63" x="527.536981" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
-      </g>
-     </g>
-     <g id="text_34">
-      <!-- $\mathdefault{8}$ -->
-      <g style="fill: #231f20" transform="translate(525.296981 168.04576)">
-       <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">8</tspan>
-       </text>
-      </g>
-     </g>
-    </g>
-    <g id="xtick_18">
      <g id="line2d_38">
       <g>
-       <use xlink:href="#m5f1c306c63" x="557.813823" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m5f1c306c63" x="455.057684" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
      <g id="text_35">
       <!-- $\mathdefault{10}$ -->
-      <g style="fill: #231f20" transform="translate(553.333823 168.04576)">
+      <g style="fill: #231f20" transform="translate(450.577684 168.04576)">
        <text>
         <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">1</tspan>
         <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
@@ -674,243 +764,277 @@ L 466.983298 23.10024
       </g>
      </g>
     </g>
-    <g id="text_36">
-     <text style="font-size: 10px; font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #231f20" x="482.121719" y="182.06976" transform="rotate(-0 482.121719 182.06976)">Epoch</text>
-    </g>
-   </g>
-   <g id="matplotlib.axis_6">
-    <g id="ytick_14">
+    <g id="xtick_18">
      <g id="line2d_39">
       <g>
-       <use xlink:href="#m659ce541e8" x="398.929615" y="150.89976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m5f1c306c63" x="480.471719" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+      </g>
+     </g>
+     <g id="text_36">
+      <!-- $\mathdefault{15}$ -->
+      <g style="fill: #231f20" transform="translate(475.991719 168.04576)">
+       <text>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">1</tspan>
+        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">5</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_19">
+     <g id="line2d_40">
+      <g>
+       <use xlink:href="#m5f1c306c63" x="505.885753" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
      <g id="text_37">
-      <!-- $\mathdefault{0.1860}$ -->
-      <g style="fill: #231f20" transform="translate(372.449615 154.70776)">
+      <!-- $\mathdefault{20}$ -->
+      <g style="fill: #231f20" transform="translate(501.405753 168.04576)">
        <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
-        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
-        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">1</tspan>
-        <tspan x="11.119843" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">8</tspan>
-        <tspan x="15.56778" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">6</tspan>
-        <tspan x="20.015717" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
-       </text>
-      </g>
-     </g>
-    </g>
-    <g id="ytick_15">
-     <g id="line2d_40">
-      <g>
-       <use xlink:href="#m659ce541e8" x="398.929615" y="125.339856" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
-      </g>
-     </g>
-     <g id="text_38">
-      <!-- $\mathdefault{0.1865}$ -->
-      <g style="fill: #231f20" transform="translate(372.449615 129.147856)">
-       <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
-        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
-        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">1</tspan>
-        <tspan x="11.119843" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">8</tspan>
-        <tspan x="15.56778" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">6</tspan>
-        <tspan x="20.015717" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">5</tspan>
-       </text>
-      </g>
-     </g>
-    </g>
-    <g id="ytick_16">
-     <g id="line2d_41">
-      <g>
-       <use xlink:href="#m659ce541e8" x="398.929615" y="99.779952" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
-      </g>
-     </g>
-     <g id="text_39">
-      <!-- $\mathdefault{0.1870}$ -->
-      <g style="fill: #231f20" transform="translate(372.449615 103.587952)">
-       <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
-        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
-        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">1</tspan>
-        <tspan x="11.119843" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">8</tspan>
-        <tspan x="15.56778" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">7</tspan>
-        <tspan x="20.015717" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
-       </text>
-      </g>
-     </g>
-    </g>
-    <g id="ytick_17">
-     <g id="line2d_42">
-      <g>
-       <use xlink:href="#m659ce541e8" x="398.929615" y="74.220048" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
-      </g>
-     </g>
-     <g id="text_40">
-      <!-- $\mathdefault{0.1875}$ -->
-      <g style="fill: #231f20" transform="translate(372.449615 78.028048)">
-       <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
-        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
-        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">1</tspan>
-        <tspan x="11.119843" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">8</tspan>
-        <tspan x="15.56778" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">7</tspan>
-        <tspan x="20.015717" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">5</tspan>
-       </text>
-      </g>
-     </g>
-    </g>
-    <g id="ytick_18">
-     <g id="line2d_43">
-      <g>
-       <use xlink:href="#m659ce541e8" x="398.929615" y="48.660144" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
-      </g>
-     </g>
-     <g id="text_41">
-      <!-- $\mathdefault{0.1880}$ -->
-      <g style="fill: #231f20" transform="translate(372.449615 52.468144)">
-       <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
-        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
-        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">1</tspan>
-        <tspan x="11.119843" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">8</tspan>
-        <tspan x="15.56778" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">8</tspan>
-        <tspan x="20.015717" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
-       </text>
-      </g>
-     </g>
-    </g>
-    <g id="ytick_19">
-     <g id="line2d_44">
-      <g>
-       <use xlink:href="#m659ce541e8" x="398.929615" y="23.10024" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
-      </g>
-     </g>
-     <g id="text_42">
-      <!-- $\mathdefault{0.1885}$ -->
-      <g style="fill: #231f20" transform="translate(372.449615 26.90824)">
-       <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
-        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
-        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">1</tspan>
-        <tspan x="11.119843" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">8</tspan>
-        <tspan x="15.56778" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">8</tspan>
-        <tspan x="20.015717" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">5</tspan>
-       </text>
-      </g>
-     </g>
-    </g>
-   </g>
-   <g id="line2d_45">
-    <path d="M 421.568036 34.549805 
-L 436.706456 112.223893 
-L 451.844877 121.503902 
-L 466.983298 119.258872 
-L 482.121719 119.294376 
-L 497.260139 116.534923 
-L 512.39856 114.732555 
-L 527.536981 113.410616 
-L 542.675402 112.22767 
-L 557.813823 112.130224 
-" style="fill: none; stroke: #231f20; stroke-width: 0.5; stroke-linecap: round"/>
-   </g>
-   <g id="line2d_46">
-    <path d="M 421.568036 115.757435 
-L 436.706456 126.562016 
-L 451.844877 130.615646 
-L 466.983298 127.837592 
-L 482.121719 122.521983 
-L 497.260139 125.272843 
-L 512.39856 127.047262 
-L 527.536981 121.725704 
-L 542.675402 121.41807 
-L 557.813823 120.416135 
-" style="fill: none; stroke-dasharray: 2,1; stroke-dashoffset: 0; stroke: #ed1c24; stroke-width: 0.5"/>
-   </g>
-   <g id="patch_9">
-    <path d="M 398.929615 150.89976 
-L 398.929615 23.10024 
-" style="fill: none; stroke: #231f20; stroke-width: 0.75; stroke-linejoin: miter; stroke-linecap: square"/>
-   </g>
-   <g id="patch_10">
-    <path d="M 406.429615 158.39976 
-L 557.813823 158.39976 
-" style="fill: none; stroke: #231f20; stroke-width: 0.75; stroke-linejoin: miter; stroke-linecap: square"/>
-   </g>
-   <g id="text_43">
-    <text style="font-weight: 500; font-size: 12px; font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #231f20" x="482.121719" y="14.70024" transform="rotate(-0 482.121719 14.70024)">decoder_loss</text>
-   </g>
-  </g>
-  <g id="axes_4">
-   <g id="patch_11">
-    <path d="M 588.914303 150.89976 
-L 740.29851 150.89976 
-L 740.29851 23.10024 
-L 588.914303 23.10024 
-z
-" style="fill: #ffffff"/>
-   </g>
-   <g id="line2d_47">
-    <path d="M 649.467986 150.89976 
-L 649.467986 23.10024 
-" style="fill: none; stroke: #bfbfbf; stroke-width: 0.5; stroke-linecap: round"/>
-   </g>
-   <g id="matplotlib.axis_7">
-    <g id="xtick_19">
-     <g id="line2d_48">
-      <g>
-       <use xlink:href="#m5f1c306c63" x="588.914303" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
-      </g>
-     </g>
-     <g id="text_44">
-      <!-- $\mathdefault{0}$ -->
-      <g style="fill: #231f20" transform="translate(586.674303 168.04576)">
-       <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">2</tspan>
+        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
        </text>
       </g>
      </g>
     </g>
     <g id="xtick_20">
-     <g id="line2d_49">
+     <g id="line2d_41">
       <g>
-       <use xlink:href="#m5f1c306c63" x="619.191144" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m5f1c306c63" x="531.299788" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
-     <g id="text_45">
-      <!-- $\mathdefault{2}$ -->
-      <g style="fill: #231f20" transform="translate(616.951144 168.04576)">
+     <g id="text_38">
+      <!-- $\mathdefault{25}$ -->
+      <g style="fill: #231f20" transform="translate(526.819788 168.04576)">
        <text>
         <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">2</tspan>
+        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">5</tspan>
        </text>
       </g>
      </g>
     </g>
     <g id="xtick_21">
-     <g id="line2d_50">
+     <g id="line2d_42">
       <g>
-       <use xlink:href="#m5f1c306c63" x="649.467986" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m5f1c306c63" x="556.713823" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
-     <g id="text_46">
-      <!-- $\mathdefault{4}$ -->
-      <g style="fill: #231f20" transform="translate(647.227986 168.04576)">
+     <g id="text_39">
+      <!-- $\mathdefault{30}$ -->
+      <g style="fill: #231f20" transform="translate(552.233823 168.04576)">
        <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">4</tspan>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">3</tspan>
+        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
        </text>
       </g>
      </g>
     </g>
+    <g id="text_40">
+     <text style="font-size: 10px; font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #231f20" x="480.471719" y="182.06976" transform="rotate(-0 480.471719 182.06976)">Epoch</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_6">
+    <g id="ytick_15">
+     <g id="line2d_43">
+      <g>
+       <use xlink:href="#m659ce541e8" x="396.729615" y="150.89976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+      </g>
+     </g>
+     <g id="text_41">
+      <!-- $\mathdefault{1.368}$ -->
+      <g style="fill: #231f20" transform="translate(374.649615 154.70776)">
+       <text>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">1</tspan>
+        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
+        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">3</tspan>
+        <tspan x="11.119843" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">6</tspan>
+        <tspan x="15.56778" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">8</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_16">
+     <g id="line2d_44">
+      <g>
+       <use xlink:href="#m659ce541e8" x="396.729615" y="118.94988" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+      </g>
+     </g>
+     <g id="text_42">
+      <!-- $\mathdefault{1.370}$ -->
+      <g style="fill: #231f20" transform="translate(374.649615 122.75788)">
+       <text>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">1</tspan>
+        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
+        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">3</tspan>
+        <tspan x="11.119843" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">7</tspan>
+        <tspan x="15.56778" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_17">
+     <g id="line2d_45">
+      <g>
+       <use xlink:href="#m659ce541e8" x="396.729615" y="87" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+      </g>
+     </g>
+     <g id="text_43">
+      <!-- $\mathdefault{1.372}$ -->
+      <g style="fill: #231f20" transform="translate(374.649615 90.808)">
+       <text>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">1</tspan>
+        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
+        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">3</tspan>
+        <tspan x="11.119843" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">7</tspan>
+        <tspan x="15.56778" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">2</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_18">
+     <g id="line2d_46">
+      <g>
+       <use xlink:href="#m659ce541e8" x="396.729615" y="55.05012" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+      </g>
+     </g>
+     <g id="text_44">
+      <!-- $\mathdefault{1.374}$ -->
+      <g style="fill: #231f20" transform="translate(374.649615 58.85812)">
+       <text>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">1</tspan>
+        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
+        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">3</tspan>
+        <tspan x="11.119843" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">7</tspan>
+        <tspan x="15.56778" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">4</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_19">
+     <g id="line2d_47">
+      <g>
+       <use xlink:href="#m659ce541e8" x="396.729615" y="23.10024" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+      </g>
+     </g>
+     <g id="text_45">
+      <!-- $\mathdefault{1.376}$ -->
+      <g style="fill: #231f20" transform="translate(374.649615 26.90824)">
+       <text>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">1</tspan>
+        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
+        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">3</tspan>
+        <tspan x="11.119843" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">7</tspan>
+        <tspan x="15.56778" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">6</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_48">
+    <path d="M 409.312422 36.926086 
+L 414.395229 80.2479 
+L 419.478036 82.804907 
+L 424.560843 74.707089 
+L 429.64365 79.145026 
+L 434.726456 88.781958 
+L 439.809263 90.95938 
+L 444.89207 91.097239 
+L 449.974877 87.67153 
+L 455.057684 91.48249 
+L 460.140491 92.855417 
+L 465.223298 94.279334 
+L 470.306105 95.518179 
+L 475.388912 100.807822 
+L 480.471719 105.885954 
+L 485.554526 108.975514 
+L 490.637333 113.243487 
+L 495.72014 114.193394 
+L 500.802946 115.885475 
+L 505.885753 114.714615 
+L 510.96856 116.062993 
+L 516.051367 117.494463 
+L 521.134174 117.549229 
+L 526.216981 118.665323 
+L 531.299788 119.424494 
+L 536.382595 119.907946 
+L 541.465402 120.395174 
+L 546.548209 120.765317 
+L 551.631016 120.818195 
+L 556.713823 119.972154 
+" style="fill: none; stroke: #231f20; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_49">
+    <path d="M 409.312422 23.317436 
+L 414.395229 116.438329 
+L 419.478036 60.329119 
+L 424.560843 129.391674 
+L 429.64365 138.54421 
+L 434.726456 131.586328 
+L 439.809263 141.000183 
+L 444.89207 126.852844 
+L 449.974877 133.908455 
+L 455.057684 132.786696 
+L 460.140491 142.750808 
+L 465.223298 138.990365 
+L 470.306105 142.50861 
+L 475.388912 142.653079 
+L 480.471719 140.887582 
+L 485.554526 133.963693 
+L 490.637333 130.844863 
+L 495.72014 135.95864 
+L 500.802946 143.902311 
+L 505.885753 136.42604 
+L 510.96856 124.184417 
+L 516.051367 138.837397 
+L 521.134174 120.638553 
+L 526.216981 142.570221 
+L 531.299788 140.934322 
+L 536.382595 137.095271 
+L 541.465402 149.443122 
+L 546.548209 147.014768 
+L 551.631016 139.015859 
+L 556.713823 146.237185 
+" style="fill: none; stroke-dasharray: 2,1; stroke-dashoffset: 0; stroke: #ed1c24; stroke-width: 0.5"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 396.729615 150.89976 
+L 396.729615 23.10024 
+" style="fill: none; stroke: #231f20; stroke-width: 0.75; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 404.229615 158.39976 
+L 556.713823 158.39976 
+" style="fill: none; stroke: #231f20; stroke-width: 0.75; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_46">
+    <text style="font-weight: 500; font-size: 12px; font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #231f20" x="480.471719" y="14.70024" transform="rotate(-0 480.471719 14.70024)">decoder_loss</text>
+   </g>
+  </g>
+  <g id="axes_4">
+   <g id="patch_11">
+    <path d="M 587.814303 150.89976 
+L 740.29851 150.89976 
+L 740.29851 23.10024 
+L 587.814303 23.10024 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="line2d_50">
+    <path d="M 653.890792 150.89976 
+L 653.890792 23.10024 
+" style="fill: none; stroke: #bfbfbf; stroke-width: 0.5; stroke-linecap: round"/>
+   </g>
+   <g id="matplotlib.axis_7">
     <g id="xtick_22">
      <g id="line2d_51">
       <g>
-       <use xlink:href="#m5f1c306c63" x="679.744827" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m5f1c306c63" x="587.814303" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
      <g id="text_47">
-      <!-- $\mathdefault{6}$ -->
-      <g style="fill: #231f20" transform="translate(677.504827 168.04576)">
+      <!-- $\mathdefault{0}$ -->
+      <g style="fill: #231f20" transform="translate(585.574303 168.04576)">
        <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">6</tspan>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
        </text>
       </g>
      </g>
@@ -918,14 +1042,14 @@ L 649.467986 23.10024
     <g id="xtick_23">
      <g id="line2d_52">
       <g>
-       <use xlink:href="#m5f1c306c63" x="710.021668" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m5f1c306c63" x="613.228337" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
      <g id="text_48">
-      <!-- $\mathdefault{8}$ -->
-      <g style="fill: #231f20" transform="translate(707.781668 168.04576)">
+      <!-- $\mathdefault{5}$ -->
+      <g style="fill: #231f20" transform="translate(610.988337 168.04576)">
        <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">8</tspan>
+        <tspan x="0" y="-0.421875" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">5</tspan>
        </text>
       </g>
      </g>
@@ -933,12 +1057,12 @@ L 649.467986 23.10024
     <g id="xtick_24">
      <g id="line2d_53">
       <g>
-       <use xlink:href="#m5f1c306c63" x="740.29851" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m5f1c306c63" x="638.642372" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
      <g id="text_49">
       <!-- $\mathdefault{10}$ -->
-      <g style="fill: #231f20" transform="translate(735.81851 168.04576)">
+      <g style="fill: #231f20" transform="translate(634.162372 168.04576)">
        <text>
         <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">1</tspan>
         <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
@@ -946,124 +1070,188 @@ L 649.467986 23.10024
       </g>
      </g>
     </g>
-    <g id="text_50">
-     <text style="font-size: 10px; font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #231f20" x="664.606406" y="182.06976" transform="rotate(-0 664.606406 182.06976)">Epoch</text>
+    <g id="xtick_25">
+     <g id="line2d_54">
+      <g>
+       <use xlink:href="#m5f1c306c63" x="664.056406" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+      </g>
+     </g>
+     <g id="text_50">
+      <!-- $\mathdefault{15}$ -->
+      <g style="fill: #231f20" transform="translate(659.576406 168.04576)">
+       <text>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">1</tspan>
+        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">5</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_26">
+     <g id="line2d_55">
+      <g>
+       <use xlink:href="#m5f1c306c63" x="689.470441" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+      </g>
+     </g>
+     <g id="text_51">
+      <!-- $\mathdefault{20}$ -->
+      <g style="fill: #231f20" transform="translate(684.990441 168.04576)">
+       <text>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">2</tspan>
+        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_27">
+     <g id="line2d_56">
+      <g>
+       <use xlink:href="#m5f1c306c63" x="714.884475" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+      </g>
+     </g>
+     <g id="text_52">
+      <!-- $\mathdefault{25}$ -->
+      <g style="fill: #231f20" transform="translate(710.404475 168.04576)">
+       <text>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">2</tspan>
+        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">5</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_28">
+     <g id="line2d_57">
+      <g>
+       <use xlink:href="#m5f1c306c63" x="740.29851" y="158.39976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+      </g>
+     </g>
+     <g id="text_53">
+      <!-- $\mathdefault{30}$ -->
+      <g style="fill: #231f20" transform="translate(735.81851 168.04576)">
+       <text>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">3</tspan>
+        <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="text_54">
+     <text style="font-size: 10px; font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #231f20" x="664.056406" y="182.06976" transform="rotate(-0 664.056406 182.06976)">Epoch</text>
     </g>
    </g>
    <g id="matplotlib.axis_8">
     <g id="ytick_20">
-     <g id="line2d_54">
+     <g id="line2d_58">
       <g>
-       <use xlink:href="#m659ce541e8" x="581.414303" y="150.89976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m659ce541e8" x="580.314303" y="150.89976" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
-     <g id="text_51">
-      <!-- $\mathdefault{0.0}$ -->
-      <g style="fill: #231f20" transform="translate(568.294303 154.70776)">
+     <g id="text_55">
+      <!-- $\mathdefault{0.8}$ -->
+      <g style="fill: #231f20" transform="translate(567.194303 154.70776)">
        <text>
         <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
         <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
-        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
+        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">8</tspan>
        </text>
       </g>
      </g>
     </g>
     <g id="ytick_21">
-     <g id="line2d_55">
+     <g id="line2d_59">
       <g>
-       <use xlink:href="#m659ce541e8" x="581.414303" y="129.59984" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m659ce541e8" x="580.314303" y="129.59984" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
-     <g id="text_52">
-      <!-- $\mathdefault{0.5}$ -->
-      <g style="fill: #231f20" transform="translate(568.294303 133.40784)">
+     <g id="text_56">
+      <!-- $\mathdefault{1.0}$ -->
+      <g style="fill: #231f20" transform="translate(567.194303 133.40784)">
        <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">1</tspan>
         <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
-        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">5</tspan>
+        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
        </text>
       </g>
      </g>
     </g>
     <g id="ytick_22">
-     <g id="line2d_56">
+     <g id="line2d_60">
       <g>
-       <use xlink:href="#m659ce541e8" x="581.414303" y="108.29992" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m659ce541e8" x="580.314303" y="108.29992" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
-     <g id="text_53">
-      <!-- $\mathdefault{1.0}$ -->
-      <g style="fill: #231f20" transform="translate(568.294303 112.10792)">
+     <g id="text_57">
+      <!-- $\mathdefault{1.2}$ -->
+      <g style="fill: #231f20" transform="translate(567.194303 112.10792)">
        <text>
         <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">1</tspan>
         <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
-        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
+        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">2</tspan>
        </text>
       </g>
      </g>
     </g>
     <g id="ytick_23">
-     <g id="line2d_57">
+     <g id="line2d_61">
       <g>
-       <use xlink:href="#m659ce541e8" x="581.414303" y="87" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m659ce541e8" x="580.314303" y="87" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
-     <g id="text_54">
-      <!-- $\mathdefault{1.5}$ -->
-      <g style="fill: #231f20" transform="translate(568.294303 90.808)">
+     <g id="text_58">
+      <!-- $\mathdefault{1.4}$ -->
+      <g style="fill: #231f20" transform="translate(567.194303 90.808)">
        <text>
         <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">1</tspan>
         <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
-        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">5</tspan>
+        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">4</tspan>
        </text>
       </g>
      </g>
     </g>
     <g id="ytick_24">
-     <g id="line2d_58">
+     <g id="line2d_62">
       <g>
-       <use xlink:href="#m659ce541e8" x="581.414303" y="65.70008" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m659ce541e8" x="580.314303" y="65.70008" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
-     <g id="text_55">
-      <!-- $\mathdefault{2.0}$ -->
-      <g style="fill: #231f20" transform="translate(568.294303 69.50808)">
+     <g id="text_59">
+      <!-- $\mathdefault{1.6}$ -->
+      <g style="fill: #231f20" transform="translate(567.194303 69.50808)">
        <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">2</tspan>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">1</tspan>
         <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
-        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
+        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">6</tspan>
        </text>
       </g>
      </g>
     </g>
     <g id="ytick_25">
-     <g id="line2d_59">
+     <g id="line2d_63">
       <g>
-       <use xlink:href="#m659ce541e8" x="581.414303" y="44.40016" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m659ce541e8" x="580.314303" y="44.40016" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
-     <g id="text_56">
-      <!-- $\mathdefault{2.5}$ -->
-      <g style="fill: #231f20" transform="translate(568.294303 48.20816)">
+     <g id="text_60">
+      <!-- $\mathdefault{1.8}$ -->
+      <g style="fill: #231f20" transform="translate(567.194303 48.20816)">
        <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">2</tspan>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">1</tspan>
         <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
-        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">5</tspan>
+        <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">8</tspan>
        </text>
       </g>
      </g>
     </g>
     <g id="ytick_26">
-     <g id="line2d_60">
+     <g id="line2d_64">
       <g>
-       <use xlink:href="#m659ce541e8" x="581.414303" y="23.10024" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
+       <use xlink:href="#m659ce541e8" x="580.314303" y="23.10024" style="fill: #231f20; stroke: #231f20; stroke-width: 0.75"/>
       </g>
      </g>
-     <g id="text_57">
-      <!-- $\mathdefault{3.0}$ -->
-      <g style="fill: #231f20" transform="translate(568.294303 26.90824)">
+     <g id="text_61">
+      <!-- $\mathdefault{2.0}$ -->
+      <g style="fill: #231f20" transform="translate(567.194303 26.90824)">
        <text>
-        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">3</tspan>
+        <tspan x="0" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">2</tspan>
         <tspan x="4.447937" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">.</tspan>
         <tspan x="6.671906" y="-0.328125" style="font-size: 8px; font-family: 'Helvetica Neue'; fill: #231f20">0</tspan>
        </text>
@@ -1071,63 +1259,103 @@ L 649.467986 23.10024
      </g>
     </g>
    </g>
-   <g id="line2d_61">
-    <path d="M 604.052723 65.692526 
-L 619.191144 74.961728 
-L 634.329565 81.490885 
-L 649.467986 86.831577 
-L 664.606406 92.784702 
-L 679.744827 100.569435 
-L 694.883248 109.182043 
-L 710.021668 117.518349 
-L 725.160089 124.501045 
-L 740.29851 130.385853 
+   <g id="line2d_65">
+    <path d="M 592.897109 29.597694 
+L 597.979916 47.118957 
+L 603.062723 60.32506 
+L 608.14553 69.279003 
+L 613.228337 77.136266 
+L 618.311144 83.436059 
+L 623.393951 88.279503 
+L 628.476758 92.079913 
+L 633.559565 99.306951 
+L 638.642372 104.797062 
+L 643.725179 108.220971 
+L 648.807986 111.110742 
+L 653.890792 114.729341 
+L 658.973599 116.516098 
+L 664.056406 119.65117 
+L 669.139213 121.321987 
+L 674.22202 123.70446 
+L 679.304827 125.956313 
+L 684.387634 127.231619 
+L 689.470441 130.68026 
+L 694.553248 132.448542 
+L 699.636055 134.74434 
+L 704.718862 136.752623 
+L 709.801668 138.61356 
+L 714.884475 140.887577 
+L 719.967282 142.262765 
+L 725.050089 144.466972 
+L 730.132896 146.486988 
+L 735.215703 147.104547 
+L 740.29851 149.525458 
 " style="fill: none; stroke: #231f20; stroke-width: 0.5; stroke-linecap: round"/>
    </g>
-   <g id="line2d_62">
-    <path d="M 604.052723 70.526761 
-L 619.191144 80.046735 
-L 634.329565 82.781834 
-L 649.467986 84.799981 
-L 664.606406 82.632357 
-L 679.744827 77.097064 
-L 694.883248 71.365452 
-L 710.021668 61.262089 
-L 725.160089 47.670927 
-L 740.29851 34.567169 
+   <g id="line2d_66">
+    <path d="M 592.897109 54.539598 
+L 597.979916 56.695883 
+L 603.062723 71.638637 
+L 608.14553 78.789994 
+L 613.228337 84.888427 
+L 618.311144 88.108584 
+L 623.393951 94.22298 
+L 628.476758 95.89001 
+L 633.559565 101.696559 
+L 638.642372 102.34531 
+L 643.725179 105.737286 
+L 648.807986 107.710195 
+L 653.890792 108.13778 
+L 658.973599 106.364126 
+L 664.056406 107.891659 
+L 669.139213 106.635926 
+L 674.22202 105.527084 
+L 679.304827 103.742297 
+L 684.387634 106.889667 
+L 689.470441 106.586991 
+L 694.553248 105.361341 
+L 699.636055 105.16577 
+L 704.718862 103.509065 
+L 709.801668 105.556757 
+L 714.884475 102.81754 
+L 719.967282 101.933517 
+L 725.050089 96.396204 
+L 730.132896 104.532953 
+L 735.215703 100.981155 
+L 740.29851 102.506492 
 " style="fill: none; stroke-dasharray: 2,1; stroke-dashoffset: 0; stroke: #ed1c24; stroke-width: 0.5"/>
    </g>
    <g id="patch_12">
-    <path d="M 581.414303 150.89976 
-L 581.414303 23.10024 
+    <path d="M 580.314303 150.89976 
+L 580.314303 23.10024 
 " style="fill: none; stroke: #231f20; stroke-width: 0.75; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
    <g id="patch_13">
-    <path d="M 588.914303 158.39976 
+    <path d="M 587.814303 158.39976 
 L 740.29851 158.39976 
 " style="fill: none; stroke: #231f20; stroke-width: 0.75; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
-   <g id="text_58">
-    <text style="font-weight: 500; font-size: 12px; font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #231f20" x="664.606406" y="14.70024" transform="rotate(-0 664.606406 14.70024)">classifier_loss</text>
+   <g id="text_62">
+    <text style="font-weight: 500; font-size: 12px; font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #231f20" x="664.056406" y="14.70024" transform="rotate(-0 664.056406 14.70024)">classifier_loss</text>
    </g>
   </g>
   <g id="legend_1">
-   <g id="line2d_63">
+   <g id="line2d_67">
     <path d="M 752.77923 15.02 
 L 762.77923 15.02 
 L 772.77923 15.02 
 " style="fill: none; stroke: #231f20; stroke-width: 0.5; stroke-linecap: round"/>
    </g>
-   <g id="text_59">
+   <g id="text_63">
     <text style="font-size: 10px; font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #231f20" x="780.77923" y="18.52" transform="rotate(-0 780.77923 18.52)">train</text>
    </g>
-   <g id="line2d_64">
+   <g id="line2d_68">
     <path d="M 752.77923 31.67 
 L 762.77923 31.67 
 L 772.77923 31.67 
 " style="fill: none; stroke-dasharray: 2,1; stroke-dashoffset: 0; stroke: #ed1c24; stroke-width: 0.5"/>
    </g>
-   <g id="text_60">
+   <g id="text_64">
     <text style="font-size: 10px; font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #231f20" x="780.77923" y="35.17" transform="rotate(-0 780.77923 35.17)">validation</text>
    </g>
   </g>

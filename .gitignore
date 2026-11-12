@@ -225,6 +225,6 @@ __marimo__/
 # Project
 # Track only the epoch each notebook loads.
 checkpoints/*/*
-!checkpoints/neuron-glia/14.safetensors
-!checkpoints/fetal-adult/14.safetensors
-!checkpoints/cell-type-specific/10.safetensors
+!checkpoints/neuron-glia/17.safetensors
+!checkpoints/fetal-adult/27.safetensors
+!checkpoints/cell-type-specific/13.safetensors
