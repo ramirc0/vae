@@ -15,12 +15,14 @@ def _():
     from vae.learning_curves import plot_learning_curves
     from vae.model import VAE
     from vae.regions import encode_regions, read_labels
-    from vae.training import fit, latent_means_of
+    from vae.training import best_epoch, first_validation_row, fit, latent_means_of
 
     pk.use()
     return (
         VAE,
+        best_epoch,
         encode_regions,
+        first_validation_row,
         fit,
         latent_means_of,
         load_file,
@@ -39,7 +41,8 @@ def _(mo):
     # Fetal vs adult b-cCREs
 
     VAE with a 3-class head: fetal-specific, adult-specific and
-    shared b-cCREs. Port of `Fetal-Adult.ipynb` from Pratt et al. 2024.
+    shared b-cCREs. Based on `Fetal-Adult.ipynb` from Pratt et al. 2024.
+    The UMAP shows the held-out rows.
     """)
     return
 
@@ -84,40 +87,54 @@ def _(encode_regions, labels):
 
 @app.cell
 def _(mo):
-    train_button = mo.ui.run_button(label="Train 20 epochs")
+    train_button = mo.ui.run_button(label="Train 30 epochs")
     train_button
     return (train_button,)
 
 
 @app.cell
-def _(CHECKPOINTS, CLASSES, RESULTS, X, fit, labels, mo, pl, train_button, vae_model):
+def _(
+    CHECKPOINTS,
+    CLASSES,
+    RESULTS,
+    X,
+    best_epoch,
+    fit,
+    labels,
+    mo,
+    pl,
+    train_button,
+    vae_model,
+):
     if train_button.value or "train" in mo.cli_args():
         history = fit(
             vae_model,
             X,
             labels.select(CLASSES).to_numpy(),
-            epochs=20,
+            epochs=30,
             checkpoints=CHECKPOINTS,
         )
         history.write_csv(RESULTS / "history.csv")
     else:
         history = pl.read_csv(RESULTS / "history.csv")
-    weights = CHECKPOINTS / "14.safetensors"
-    return history, weights
+    loaded_epoch = best_epoch(history)
+    weights = CHECKPOINTS / f"{loaded_epoch:02d}.safetensors"
+    return history, loaded_epoch, weights
 
 
 @app.cell
-def _(RESULTS, history, plot_learning_curves):
-    plot_learning_curves(history, RESULTS / "learning-curves")
+def _(RESULTS, history, loaded_epoch, plot_learning_curves):
+    plot_learning_curves(history, loaded_epoch, RESULTS / "learning-curves")
     return
 
 
 @app.cell
-def _(X, latent_means_of, load_file, mo, vae_model, weights):
+def _(X, first_validation_row, latent_means_of, load_file, mo, vae_model, weights):
     mo.stop(not weights.exists(), mo.md(f"No checkpoint at `{weights}`. Train first."))
     vae_model.load_state_dict(load_file(weights))
-    latent_means = latent_means_of(vae_model, X)
-    return (latent_means,)
+    held_out = slice(first_validation_row(len(X)), None)
+    latent_means = latent_means_of(vae_model, X[held_out])
+    return held_out, latent_means
 
 
 @app.cell
@@ -127,14 +144,14 @@ def _(latent_means, umap_of):
 
 
 @app.cell
-def _(COLORS, RESULTS, embedding, labels, plot_umap):
-    plot_umap(embedding, labels, COLORS, RESULTS / "umap")
+def _(COLORS, RESULTS, embedding, held_out, labels, plot_umap):
+    plot_umap(embedding, labels[held_out], COLORS, RESULTS / "umap")
     return
 
 
 @app.cell
-def _(COLORS, RESULTS, embedding, labels, plot_umap):
-    plot_umap(embedding, labels, COLORS, RESULTS / "umap-bare", axes=False)
+def _(COLORS, RESULTS, embedding, held_out, labels, plot_umap):
+    plot_umap(embedding, labels[held_out], COLORS, RESULTS / "umap-bare", axes=False)
     return
 
 

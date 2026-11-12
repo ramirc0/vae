@@ -1,4 +1,4 @@
-"""Draw the Pratt et al. 2024 b-cCRE VAE as an SVG.
+"""Draw the b-cCRE VAE as an SVG.
 
 Run ``python scripts/architecture.py out.svg``. Values follow
 ``vae.model.VAE``. Shapes are channels × length.
@@ -26,20 +26,20 @@ ENCODER = [
     ("MaxPool1d(8)", "256 × 64"),
     ("Conv1d(256→128, k=8), ReLU", "128 × 64"),
     ("MaxPool1d(2)", "128 × 32"),
-    ("Flatten", "4,096"),
-    ("Linear(4,096→1,028)", "1,028"),
-    ("Linear(1,028→512)", "512"),
+    ("Flatten, Dropout(0.5)", "4,096"),
+    ("Linear(4,096→1,028), ReLU", "1,028"),
+    ("Linear(1,028→512), ReLU", "512"),
 ]
 DECODER = [
-    ("Linear(256→512)", "512"),
-    ("Linear(512→1,028)", "1,028"),
-    ("Linear(1,028→4,096)", "4,096"),
+    ("Linear(256→512), ReLU", "512"),
+    ("Linear(512→1,028), ReLU", "1,028"),
+    ("Linear(1,028→4,096), ReLU", "4,096"),
     ("Unflatten", "128 × 32"),
     ("Upsample(×2)", "128 × 64"),
-    ("ConvTranspose1d(128→128, k=8)", "128 × 64"),
+    ("ConvTranspose1d(128→128, k=8), ReLU", "128 × 64"),
     ("Upsample(×8)", "128 × 512"),
-    ("ConvTranspose1d(128→512, k=32)", "512 × 512"),
-    ("ConvTranspose1d(512→4, k=32), ReLU", "4 × 512"),
+    ("ConvTranspose1d(128→512, k=32), ReLU", "512 × 512"),
+    ("ConvTranspose1d(512→4, k=32)", "4 × 512"),
 ]
 
 
@@ -131,11 +131,11 @@ def latent():
         path([(kl, 920), (kl, 960)]),
         path([(z, 920), (z, 960)]),
         box(40, 960, 290, 64, ["KL divergence", "−½(1 + log σ² − μ² − σ²)"]),
-        box(350, 960, 290, 64, ["Sample z", "μ + exp(½ log σ²) · ε"]),
+        box(350, 960, 290, 64, ["z: sampled in training", "μ + exp(½ log σ²) · ε"]),
         path([(kl, 1024), (kl, 1230)]),
         shape(kl, 1127, "256"),
         box(40, 1230, 290, 80, ["Output", "KL per dimension"], GRAY[0]),
-        text(kl, 1335, ["MAE against 0"], size=16, fill=LABEL),
+        text(kl, 1335, ["Summed, ÷ 512"], size=16, fill=LABEL),
         path([(z, 1024), (z, 1060)], arrow=False),
         panel(330, 1085, 330, 94, YELLOW),
         path([(z, 1060), (z, 1100)]),
@@ -155,8 +155,8 @@ def decoder():
         title(940, 170, "Decoder", "end"),
         path([(SAMPLE, 1060), (RIGHT, 1060), (RIGHT, 948)]),
         shape(RIGHT, 1000, "256"),
-        box(x, 10, WIDTH, 80, ["Output", "Reconstructed one-hot DNA"], GRAY[0]),
-        text(940, 50, ["MSE against input"], size=16, anchor="end", fill=LABEL),
+        box(x, 10, WIDTH, 80, ["Output", "Per-base logits"], GRAY[0]),
+        text(940, 50, ["Cross-entropy against input"], size=16, anchor="end", fill=LABEL),
     ]
     for k, (label, out) in enumerate(DECODER):
         y = 896 - k * STEP
@@ -173,8 +173,9 @@ def notes():
     lines = [
         "C = 3: neuron/glia, fetal/adult",
         "C = 7: Corces cell types",
-        "Loss weights 1 : 1 : 1. Adam, learning rate 10⁻⁴.",
-        "Layers without an activation are linear.",
+        "Loss: ELBO per base + classifier cross-entropy.",
+        "AdamW, learning rate 3·10⁻⁴, weight decay 0.1.",
+        "Reverse-complement augmentation.",
     ]
     return [text(980, 1200, lines, size=16, anchor="start", fill=LABEL)]
 

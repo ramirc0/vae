@@ -1,4 +1,4 @@
-"""The b-cCRE VAE classifier from Pratt et al. 2024, as in Greg Andrews's notebooks."""
+"""A VAE classifier of b-cCREs, based on the model of Pratt et al. 2024."""
 
 import torch
 import torch.nn.functional as F
@@ -23,12 +23,15 @@ class _SameConvTranspose1d(nn.ConvTranspose1d):
 
 
 class VAE(nn.Module):
-    """VAE with a classifier head on its sampled latent vector.
+    """VAE with a classifier head on its latent vector.
 
-    Layers mirror the Keras model from the paper, channels first. The
-    encoder's two dense layers and the decoder's three have no activation,
-    as in the original. The latent vector is sampled in both training and
-    evaluation mode.
+    The layers follow the Keras model from the paper, channels first, with
+    three changes. A ReLU follows every dense layer and every inner
+    transposed convolution, where the original has none. Dropout of 0.5
+    precedes the first dense layer. The decoder returns per-base logits for
+    a cross-entropy loss, where the original ends in a ReLU for an MSE
+    loss. The latent vector is sampled in training mode and equals its mean
+    in evaluation mode.
 
     Parameters
     ----------
@@ -58,23 +61,30 @@ class VAE(nn.Module):
             nn.ReLU(),
             nn.MaxPool1d(2),
             nn.Flatten(),
+            nn.Dropout(0.5),
             nn.Linear(_POOLED_CHANNELS * _POOLED_LENGTH, 1028),
+            nn.ReLU(),
             nn.Linear(1028, 512),
+            nn.ReLU(),
         )
         self.z_mu = nn.Linear(512, LATENT_DIM)
         self.z_log_var = nn.Linear(512, LATENT_DIM)
         self.classifier = nn.Linear(LATENT_DIM, n_classes)
         self.decoder = nn.Sequential(
             nn.Linear(LATENT_DIM, 512),
+            nn.ReLU(),
             nn.Linear(512, 1028),
+            nn.ReLU(),
             nn.Linear(1028, _POOLED_CHANNELS * _POOLED_LENGTH),
+            nn.ReLU(),
             nn.Unflatten(1, (_POOLED_CHANNELS, _POOLED_LENGTH)),
             nn.Upsample(scale_factor=2),
             _SameConvTranspose1d(_POOLED_CHANNELS, 128, 8),
+            nn.ReLU(),
             nn.Upsample(scale_factor=8),
             _SameConvTranspose1d(128, SEQUENCE_LENGTH, 32),
-            _SameConvTranspose1d(SEQUENCE_LENGTH, 4, 32),
             nn.ReLU(),
+            _SameConvTranspose1d(SEQUENCE_LENGTH, 4, 32),
         )
         for module in self.modules():
             if isinstance(module, (nn.Conv1d, nn.ConvTranspose1d, nn.Linear)):
@@ -114,21 +124,27 @@ class VAE(nn.Module):
         Returns
         -------
         dict of str to torch.Tensor
-            The Keras model's six outputs. ``z_mu`` and ``z_log_var``
-            describe the latent distribution. ``latent_features`` is the
-            sampled ``z``. ``kl_div`` is the KL divergence from the standard
-            normal per latent dimension. ``decoder`` is the reconstruction,
-            of shape ``(n, 4, SEQUENCE_LENGTH)``. ``classifier`` holds the
-            class logits.
+            ``z_mu`` and ``z_log_var`` describe the latent distribution.
+            ``latent_features`` is ``z``, sampled in training mode and equal
+            to ``z_mu`` in evaluation mode. ``kl_div`` is the KL divergence
+            from the standard normal per latent dimension. ``decoder``
+            holds the reconstruction's per-base logits, of shape
+            ``(n, 4, SEQUENCE_LENGTH)``. ``classifier`` holds the class
+            logits.
 
         Examples
         --------
-        >>> outputs = VAE(n_classes=7)(torch.zeros(2, 4, SEQUENCE_LENGTH))
+        >>> model = VAE(n_classes=7).eval()
+        >>> outputs = model(torch.zeros(2, 4, SEQUENCE_LENGTH))
         >>> outputs["classifier"].shape
         torch.Size([2, 7])
+        >>> bool((outputs["latent_features"] == outputs["z_mu"]).all())
+        True
         """
         z_mu, z_log_var = self.encode(sequences)
-        z = z_mu + torch.exp(0.5 * z_log_var) * torch.randn_like(z_log_var)
+        z = z_mu
+        if self.training:
+            z = z + torch.exp(0.5 * z_log_var) * torch.randn_like(z_log_var)
         return {
             "z_mu": z_mu,
             "z_log_var": z_log_var,
@@ -140,12 +156,14 @@ class VAE(nn.Module):
 
 
 def loss_terms(outputs, sequences, targets):
-    """Compute the training loss and its three terms, weighted 1:1:1.
+    """Compute the training loss and its three terms, in nats.
 
-    The KL term is the mean absolute KL divergence, which is how Keras's mean
-    absolute error against zeros trained it. The reconstruction term is the
-    mean squared error. The classifier term is softmax cross-entropy on the
-    logits.
+    The reconstruction and KL terms form the negative ELBO per base. The
+    reconstruction term is the cross-entropy of the decoder's logits
+    against the input, averaged over bases. The KL term is the KL
+    divergence summed over latent dimensions and divided by
+    `SEQUENCE_LENGTH`. The classifier term is softmax cross-entropy on the
+    class logits. The loss is their sum.
 
     Parameters
     ----------
@@ -159,8 +177,8 @@ def loss_terms(outputs, sequences, targets):
     Returns
     -------
     dict of str to torch.Tensor
-        Scalars named as in Keras's history: ``loss`` (the sum),
-        ``kl_div_loss``, ``decoder_loss`` and ``classifier_loss``.
+        Scalars: ``loss`` (the sum), ``kl_div_loss``, ``decoder_loss`` and
+        ``classifier_loss``. Each is a mean over sequences.
 
     Examples
     --------
@@ -172,8 +190,8 @@ def loss_terms(outputs, sequences, targets):
     >>> bool(terms["loss"] == sum(list(terms.values())[1:]))
     True
     """
-    kl_div = outputs["kl_div"].abs().mean()
-    decoder = F.mse_loss(outputs["decoder"], sequences)
+    kl_div = outputs["kl_div"].sum(1).mean() / SEQUENCE_LENGTH
+    decoder = F.cross_entropy(outputs["decoder"], sequences)
     classifier = F.cross_entropy(outputs["classifier"], targets)
     return {
         "loss": kl_div + decoder + classifier,

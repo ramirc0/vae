@@ -1,4 +1,4 @@
-"""Train the VAE as Keras's ``fit`` did and read out its latent means."""
+"""Train the VAE, pick the epoch to load and read out its latent means."""
 
 import math
 import time
@@ -17,11 +17,18 @@ def _device():
     return torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
+def _reverse_complement_half(sequences):
+    flip = torch.rand(len(sequences), device=sequences.device) < 0.5
+    return torch.where(flip[:, None, None], sequences.flip(1, 2), sequences)
+
+
 def _mean_loss_terms(model, sequences, targets, batches, optimizer=None):
     totals = {}
     with torch.set_grad_enabled(optimizer is not None):
         for batch in batches:
             batch_sequences = sequences[batch]
+            if optimizer is not None:
+                batch_sequences = _reverse_complement_half(batch_sequences)
             terms = loss_terms(model(batch_sequences), batch_sequences, targets[batch])
             if optimizer is not None:
                 optimizer.zero_grad()
@@ -32,14 +39,59 @@ def _mean_loss_terms(model, sequences, targets, batches, optimizer=None):
     return {name: float(total) / len(sequences) for name, total in totals.items()}
 
 
-def fit(model, sequences, targets, epochs, checkpoints, batch_size=32):
-    """Train with Adam and save the weights after every epoch.
+def first_validation_row(n_rows):
+    """Return the index of the first held-out row.
 
-    This mirrors Keras ``fit(..., validation_split=0.1)``. The last 10% of
-    rows, unshuffled, are held out for validation. The training rows are
-    reshuffled each epoch, and the last partial batch is kept. Adam uses
-    learning rate 1e-4 and Keras's epsilon of 1e-7. Training runs on the GPU
-    when one is visible.
+    As in Keras ``fit(..., validation_split=0.1)``, the last 10% of rows,
+    unshuffled, are held out for validation.
+
+    Parameters
+    ----------
+    n_rows : int
+        Number of rows in the data set.
+
+    Returns
+    -------
+    int
+        Rows from this index on are held out.
+
+    Examples
+    --------
+    >>> first_validation_row(130650)
+    117585
+    """
+    return math.floor(n_rows * (1.0 - VALIDATION_SPLIT))
+
+
+def best_epoch(history):
+    """Return the epoch with the lowest validation classifier loss.
+
+    Parameters
+    ----------
+    history : polars.DataFrame
+        One row per epoch, as `fit` returns.
+
+    Returns
+    -------
+    int
+        The epoch, counting from 1.
+
+    Examples
+    --------
+    >>> best_epoch(pl.DataFrame({"epoch": [1, 2, 3], "val_classifier_loss": [0.9, 0.7, 0.8]}))
+    2
+    """
+    return history["epoch"][history["val_classifier_loss"].arg_min()]
+
+
+def fit(model, sequences, targets, epochs, checkpoints, batch_size=128):
+    """Train with AdamW and save the weights after every epoch.
+
+    The rows from `first_validation_row` on are held out for validation.
+    The training rows are reshuffled each epoch, and the last partial batch
+    is kept. Each training sequence is reverse complemented with
+    probability 0.5. AdamW uses learning rate 3e-4, weight decay 0.1 and
+    epsilon 1e-7. Training runs on the GPU when one is visible.
 
     Parameters
     ----------
@@ -86,9 +138,11 @@ def fit(model, sequences, targets, epochs, checkpoints, batch_size=32):
     model.to(device)
     sequences = torch.as_tensor(sequences, device=device)
     targets = torch.as_tensor(targets, dtype=torch.float32, device=device)
-    n_train = math.floor(len(sequences) * (1.0 - VALIDATION_SPLIT))
+    n_train = first_validation_row(len(sequences))
     validation_batches = torch.arange(len(sequences) - n_train).split(batch_size)
-    optimizer = torch.optim.Adam(model.parameters(), lr=1e-4, eps=1e-7)
+    optimizer = torch.optim.AdamW(
+        model.parameters(), lr=3e-4, eps=1e-7, weight_decay=0.1
+    )
     checkpoints = Path(checkpoints)
     checkpoints.mkdir(parents=True, exist_ok=True)
 

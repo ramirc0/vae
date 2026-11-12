@@ -18,13 +18,13 @@
 <rect x="100.0" y="436" width="480" height="52" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="2"/><text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle"><tspan x="340.0" y="469.0">MaxPool1d(2)</tspan></text>
 <polyline points="340,488 340,528" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#head)"/>
 <text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="18" fill="#555555" text-anchor="start"><tspan x="350" y="514.3">128 × 32</tspan></text>
-<rect x="100.0" y="528" width="480" height="52" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="2"/><text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle"><tspan x="340.0" y="561.0">Flatten</tspan></text>
+<rect x="100.0" y="528" width="480" height="52" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="2"/><text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle"><tspan x="340.0" y="561.0">Flatten, Dropout(0.5)</tspan></text>
 <polyline points="340,580 340,620" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#head)"/>
 <text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="18" fill="#555555" text-anchor="start"><tspan x="350" y="606.3">4,096</tspan></text>
-<rect x="100.0" y="620" width="480" height="52" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="2"/><text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle"><tspan x="340.0" y="653.0">Linear(4,096→1,028)</tspan></text>
+<rect x="100.0" y="620" width="480" height="52" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="2"/><text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle"><tspan x="340.0" y="653.0">Linear(4,096→1,028), ReLU</tspan></text>
 <polyline points="340,672 340,712" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#head)"/>
 <text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="18" fill="#555555" text-anchor="start"><tspan x="350" y="698.3">1,028</tspan></text>
-<rect x="100.0" y="712" width="480" height="52" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="2"/><text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle"><tspan x="340.0" y="745.0">Linear(1,028→512)</tspan></text>
+<rect x="100.0" y="712" width="480" height="52" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="2"/><text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle"><tspan x="340.0" y="745.0">Linear(1,028→512), ReLU</tspan></text>
 <rect x="20" y="815" width="640" height="225" rx="10" fill="#E8AED6" stroke="#B576A5" stroke-width="2.5"/>
 <text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="22" fill="#555555" text-anchor="start"><tspan x="680" y="852.7">Latent</tspan></text>
 <polyline points="340,764 340,800" fill="none" stroke="#333333" stroke-width="2"/>
@@ -39,11 +39,11 @@
 <polyline points="185,920 185,960" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#head)"/>
 <polyline points="495,920 495,960" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#head)"/>
 <rect x="40" y="960" width="290" height="64" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="2"/><text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle"><tspan x="185.0" y="986.5">KL divergence</tspan><tspan x="185.0" y="1011.5">−½(1 + log σ² − μ² − σ²)</tspan></text>
-<rect x="350" y="960" width="290" height="64" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="2"/><text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle"><tspan x="495.0" y="986.5">Sample z</tspan><tspan x="495.0" y="1011.5">μ + exp(½ log σ²) · ε</tspan></text>
+<rect x="350" y="960" width="290" height="64" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="2"/><text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle"><tspan x="495.0" y="986.5">z: sampled in training</tspan><tspan x="495.0" y="1011.5">μ + exp(½ log σ²) · ε</tspan></text>
 <polyline points="185,1024 185,1230" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#head)"/>
 <text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="18" fill="#555555" text-anchor="start"><tspan x="195" y="1133.3">256</tspan></text>
 <rect x="40" y="1230" width="290" height="80" rx="8" fill="#EBEBEB" stroke="#333333" stroke-width="2"/><text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle"><tspan x="185.0" y="1264.5">Output</tspan><tspan x="185.0" y="1289.5">KL per dimension</tspan></text>
-<text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="16" fill="#555555" text-anchor="middle"><tspan x="185" y="1340.6">MAE against 0</tspan></text>
+<text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="16" fill="#555555" text-anchor="middle"><tspan x="185" y="1340.6">Summed, ÷ 512</tspan></text>
 <polyline points="495,1024 495,1060" fill="none" stroke="#333333" stroke-width="2"/>
 <rect x="330" y="1085" width="330" height="94" rx="10" fill="#FFE58F" stroke="#D8B44F" stroke-width="2.5"/>
 <polyline points="495,1060 495,1100" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#head)"/>
@@ -56,15 +56,15 @@
 <text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="22" fill="#555555" text-anchor="end"><tspan x="940" y="177.7">Decoder</tspan></text>
 <polyline points="495,1060 1220,1060 1220,948" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#head)"/>
 <text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="18" fill="#555555" text-anchor="start"><tspan x="1230" y="1006.3">256</tspan></text>
-<rect x="980.0" y="10" width="480" height="80" rx="8" fill="#EBEBEB" stroke="#333333" stroke-width="2"/><text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle"><tspan x="1220.0" y="44.5">Output</tspan><tspan x="1220.0" y="69.5">Reconstructed one-hot DNA</tspan></text>
-<text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="16" fill="#555555" text-anchor="end"><tspan x="940" y="55.6">MSE against input</tspan></text>
-<rect x="980.0" y="896" width="480" height="52" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="2"/><text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle"><tspan x="1220.0" y="929.0">Linear(256→512)</tspan></text>
+<rect x="980.0" y="10" width="480" height="80" rx="8" fill="#EBEBEB" stroke="#333333" stroke-width="2"/><text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle"><tspan x="1220.0" y="44.5">Output</tspan><tspan x="1220.0" y="69.5">Per-base logits</tspan></text>
+<text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="16" fill="#555555" text-anchor="end"><tspan x="940" y="55.6">Cross-entropy against input</tspan></text>
+<rect x="980.0" y="896" width="480" height="52" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="2"/><text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle"><tspan x="1220.0" y="929.0">Linear(256→512), ReLU</tspan></text>
 <polyline points="1220,896 1220,856" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#head)"/>
 <text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="18" fill="#555555" text-anchor="start"><tspan x="1230" y="882.3">512</tspan></text>
-<rect x="980.0" y="804" width="480" height="52" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="2"/><text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle"><tspan x="1220.0" y="837.0">Linear(512→1,028)</tspan></text>
+<rect x="980.0" y="804" width="480" height="52" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="2"/><text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle"><tspan x="1220.0" y="837.0">Linear(512→1,028), ReLU</tspan></text>
 <polyline points="1220,804 1220,764" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#head)"/>
 <text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="18" fill="#555555" text-anchor="start"><tspan x="1230" y="790.3">1,028</tspan></text>
-<rect x="980.0" y="712" width="480" height="52" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="2"/><text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle"><tspan x="1220.0" y="745.0">Linear(1,028→4,096)</tspan></text>
+<rect x="980.0" y="712" width="480" height="52" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="2"/><text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle"><tspan x="1220.0" y="745.0">Linear(1,028→4,096), ReLU</tspan></text>
 <polyline points="1220,712 1220,672" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#head)"/>
 <text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="18" fill="#555555" text-anchor="start"><tspan x="1230" y="698.3">4,096</tspan></text>
 <rect x="980.0" y="620" width="480" height="52" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="2"/><text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle"><tspan x="1220.0" y="653.0">Unflatten</tspan></text>
@@ -73,17 +73,17 @@
 <rect x="980.0" y="528" width="480" height="52" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="2"/><text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle"><tspan x="1220.0" y="561.0">Upsample(×2)</tspan></text>
 <polyline points="1220,528 1220,488" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#head)"/>
 <text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="18" fill="#555555" text-anchor="start"><tspan x="1230" y="514.3">128 × 64</tspan></text>
-<rect x="980.0" y="436" width="480" height="52" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="2"/><text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle"><tspan x="1220.0" y="469.0">ConvTranspose1d(128→128, k=8)</tspan></text>
+<rect x="980.0" y="436" width="480" height="52" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="2"/><text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle"><tspan x="1220.0" y="469.0">ConvTranspose1d(128→128, k=8), ReLU</tspan></text>
 <polyline points="1220,436 1220,396" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#head)"/>
 <text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="18" fill="#555555" text-anchor="start"><tspan x="1230" y="422.3">128 × 64</tspan></text>
 <rect x="980.0" y="344" width="480" height="52" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="2"/><text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle"><tspan x="1220.0" y="377.0">Upsample(×8)</tspan></text>
 <polyline points="1220,344 1220,304" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#head)"/>
 <text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="18" fill="#555555" text-anchor="start"><tspan x="1230" y="330.3">128 × 512</tspan></text>
-<rect x="980.0" y="252" width="480" height="52" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="2"/><text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle"><tspan x="1220.0" y="285.0">ConvTranspose1d(128→512, k=32)</tspan></text>
+<rect x="980.0" y="252" width="480" height="52" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="2"/><text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle"><tspan x="1220.0" y="285.0">ConvTranspose1d(128→512, k=32), ReLU</tspan></text>
 <polyline points="1220,252 1220,212" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#head)"/>
 <text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="18" fill="#555555" text-anchor="start"><tspan x="1230" y="238.3">512 × 512</tspan></text>
-<rect x="980.0" y="160" width="480" height="52" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="2"/><text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle"><tspan x="1220.0" y="193.0">ConvTranspose1d(512→4, k=32), ReLU</tspan></text>
+<rect x="980.0" y="160" width="480" height="52" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="2"/><text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle"><tspan x="1220.0" y="193.0">ConvTranspose1d(512→4, k=32)</tspan></text>
 <polyline points="1220,160 1220,90" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#head)"/>
 <text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="18" fill="#555555" text-anchor="start"><tspan x="1230" y="131.3">4 × 512</tspan></text>
-<text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="16" fill="#555555" text-anchor="start"><tspan x="980" y="1175.6">C = 3: neuron/glia, fetal/adult</tspan><tspan x="980" y="1195.6">C = 7: Corces cell types</tspan><tspan x="980" y="1215.6">Loss weights 1 : 1 : 1. Adam, learning rate 10⁻⁴.</tspan><tspan x="980" y="1235.6">Layers without an activation are linear.</tspan></text>
+<text font-family="Helvetica, Nimbus Sans, Arial, sans-serif" font-size="16" fill="#555555" text-anchor="start"><tspan x="980" y="1165.6">C = 3: neuron/glia, fetal/adult</tspan><tspan x="980" y="1185.6">C = 7: Corces cell types</tspan><tspan x="980" y="1205.6">Loss: ELBO per base + classifier cross-entropy.</tspan><tspan x="980" y="1225.6">AdamW, learning rate 3·10⁻⁴, weight decay 0.1.</tspan><tspan x="980" y="1245.6">Reverse-complement augmentation.</tspan></text>
 </svg>
