@@ -2,10 +2,10 @@
 # which hides the GPUs from TensorFlow and breaks cuML.
 export LD_LIBRARY_PATH := `uv sync --extra gpu --quiet && ls -d "$PWD"/.venv/lib/python3*/site-packages/nvidia/*/lib | paste -sd: -`
 
-# Open a notebook in the marimo editor, e.g. `just edit neuron_glia`.
+# Open a notebook in the marimo editor, e.g. `just edit notebooks/neuron_glia.py`.
 edit notebook:
-    uv run --extra gpu marimo edit notebooks/{{ notebook }}.py
+    uv run --extra gpu marimo edit {{ notebook }}
 
 # Run a notebook top to bottom as a script.
 run notebook:
-    uv run --extra gpu python notebooks/{{ notebook }}.py
+    uv run --extra gpu python {{ notebook }}
