@@ -8,6 +8,7 @@ app = marimo.App(width="medium")
 def _():
     import marimo as mo
     import numpy as np
+    import poikilos as pk
     import polars as pl
     from keras.callbacks import ModelCheckpoint
 
@@ -15,6 +16,7 @@ def _():
     from vae.model import build_vae, compile_vae
     from vae.regions import encode_regions, read_labels
 
+    pk.use()
     return (
         ModelCheckpoint,
         build_vae,

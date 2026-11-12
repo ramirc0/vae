@@ -54,7 +54,8 @@ def plot_umap(embedding, labels, colors, path, axes=True):
     """Scatter a 2D embedding, one color per class, and save it.
 
     A region in several classes is drawn once per class, in the order of
-    `colors`, so later classes cover earlier ones.
+    `colors`, so later classes cover earlier ones. Apply a poikilos theme
+    with ``pk.use()`` first.
 
     Parameters
     ----------
@@ -83,26 +84,24 @@ def plot_umap(embedding, labels, colors, path, axes=True):
     >>> len(fig.axes[0].collections)
     2
     """
-    with pk.context():
-        fig, ax = plt.subplots()
-        for name, color in colors.items():
-            members = labels[name].to_numpy() == 1
-            ax.scatter(
-                *embedding[members].T,
-                s=0.1,
-                c=color,
-                alpha=0.5,
-                linewidths=0,
-                label=name,
-                rasterized=True,
-            )
-        ax.set_box_aspect(1)
-        if axes:
-            ax.set(xlabel="UMAP 1", ylabel="UMAP 2")
-            fig.legend(loc="outside right upper", markerscale=10)
-            pk.despine(ax, offset=7.5)
-            pk.fit_legend(fig)
-        else:
-            ax.set_axis_off()
-        pk.save_figure(fig, path)
+    fig, ax = plt.subplots(figsize=(5, 5))
+    for name, color in colors.items():
+        members = labels[name].to_numpy() == 1
+        ax.scatter(
+            *embedding[members].T,
+            s=0.1,
+            c=color,
+            alpha=0.5,
+            linewidths=0,
+            label=name,
+            rasterized=True,
+        )
+    if axes:
+        ax.set(xlabel="UMAP 1", ylabel="UMAP 2")
+        ax.legend(loc="upper left", bbox_to_anchor=(1, 1), markerscale=10)
+        pk.fit_legend(fig)
+        pk.despine(ax, offset=7.5)
+    else:
+        ax.set_axis_off()
+    pk.save_figure(fig, path)
     return fig
