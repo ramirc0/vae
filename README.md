@@ -38,7 +38,7 @@ uv sync --extra gpu
 ```
 just edit notebooks/neuron_glia.py
 ```
-* Click **Train** to fit the model. Weights for each epoch go to `checkpoints/<model>/` as safetensors files. The loss history goes to `results/<model>/history.csv`.
+* Click **Train** to fit the model. Weights for each epoch go to `checkpoints/<model>/` as safetensors files. The loss history goes to `results/<model>/history.csv`, and its learning curves to `results/<model>/learning-curves.svg`, one panel per metric.
 * Or train from the command line:
 ```
 just run notebooks/neuron_glia.py --train

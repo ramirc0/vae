@@ -8,9 +8,11 @@ app = marimo.App(width="medium")
 def _():
     import marimo as mo
     import poikilos as pk
+    import polars as pl
     from safetensors.torch import load_file
 
     from vae.latent import plot_umap, umap_of
+    from vae.learning_curves import plot_learning_curves
     from vae.model import VAE
     from vae.regions import encode_regions, read_labels
     from vae.training import fit, latent_means_of
@@ -23,6 +25,8 @@ def _():
         latent_means_of,
         load_file,
         mo,
+        pl,
+        plot_learning_curves,
         plot_umap,
         read_labels,
         umap_of,
@@ -86,7 +90,7 @@ def _(mo):
 
 
 @app.cell
-def _(CHECKPOINTS, CLASSES, RESULTS, X, fit, labels, mo, train_button, vae_model):
+def _(CHECKPOINTS, CLASSES, RESULTS, X, fit, labels, mo, pl, train_button, vae_model):
     if train_button.value or "train" in mo.cli_args():
         history = fit(
             vae_model,
@@ -96,8 +100,16 @@ def _(CHECKPOINTS, CLASSES, RESULTS, X, fit, labels, mo, train_button, vae_model
             checkpoints=CHECKPOINTS,
         )
         history.write_csv(RESULTS / "history.csv")
+    else:
+        history = pl.read_csv(RESULTS / "history.csv")
     weights = CHECKPOINTS / "14.safetensors"
-    return (weights,)
+    return history, weights
+
+
+@app.cell
+def _(RESULTS, history, plot_learning_curves):
+    plot_learning_curves(history, RESULTS / "learning-curves")
+    return
 
 
 @app.cell
