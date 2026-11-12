@@ -1,7 +1,7 @@
 """Draw the Pratt et al. 2024 b-cCRE VAE as an SVG.
 
 Run ``python scripts/architecture.py out.svg``. Values follow
-``vae.model.build_vae``.
+``vae.model.VAE``. Shapes are channels × length.
 """
 
 import sys
@@ -22,24 +22,24 @@ SAMPLE = 495
 WIDTH = 480
 
 ENCODER = [
-    ("Conv1D(4→256, k=32), ReLU", "512 × 256"),
-    ("MaxPool1D(8)", "64 × 256"),
-    ("Conv1D(256→128, k=8), ReLU", "64 × 128"),
-    ("MaxPool1D(2)", "32 × 128"),
+    ("Conv1d(4→256, k=32), ReLU", "256 × 512"),
+    ("MaxPool1d(8)", "256 × 64"),
+    ("Conv1d(256→128, k=8), ReLU", "128 × 64"),
+    ("MaxPool1d(2)", "128 × 32"),
     ("Flatten", "4,096"),
-    ("Dense(4,096→1,028)", "1,028"),
-    ("Dense(1,028→512)", "512"),
+    ("Linear(4,096→1,028)", "1,028"),
+    ("Linear(1,028→512)", "512"),
 ]
 DECODER = [
-    ("Dense(256→512)", "512"),
-    ("Dense(512→1,028)", "1,028"),
-    ("Dense(1,028→4,096)", "4,096"),
-    ("Reshape", "32 × 128"),
-    ("UpSampling1D(2)", "64 × 128"),
-    ("Conv1DTranspose(128→128, k=8)", "64 × 128"),
-    ("UpSampling1D(8)", "512 × 128"),
-    ("Conv1DTranspose(128→512, k=32)", "512 × 512"),
-    ("Conv1DTranspose(512→4, k=32), ReLU", "512 × 4"),
+    ("Linear(256→512)", "512"),
+    ("Linear(512→1,028)", "1,028"),
+    ("Linear(1,028→4,096)", "4,096"),
+    ("Unflatten", "128 × 32"),
+    ("Upsample(×2)", "128 × 64"),
+    ("ConvTranspose1d(128→128, k=8)", "128 × 64"),
+    ("Upsample(×8)", "128 × 512"),
+    ("ConvTranspose1d(128→512, k=32)", "512 × 512"),
+    ("ConvTranspose1d(512→4, k=32), ReLU", "4 × 512"),
 ]
 
 
@@ -100,7 +100,7 @@ def encoder():
         title(620, 170, "Encoder", "start"),
         box(x, 10, WIDTH, 80, ["Input", "One-hot DNA, 512 bp"], GRAY[0]),
         path([(LEFT, 90), (LEFT, 160)]),
-        shape(LEFT, 125, "512 × 4"),
+        shape(LEFT, 125, "4 × 512"),
     ]
     for i, (label, out) in enumerate(ENCODER):
         y = 160 + i * STEP
@@ -123,8 +123,8 @@ def latent():
         path([(mu, 800), (log_var, 800)], arrow=False),
         path([(mu, 800), (mu, 830)]),
         path([(log_var, 800), (log_var, 830)]),
-        box(100, 830, 230, 64, ["μ", "Dense(512→256)"]),
-        box(350, 830, 230, 64, ["log σ²", "Dense(512→256)"]),
+        box(100, 830, 230, 64, ["μ", "Linear(512→256)"]),
+        box(350, 830, 230, 64, ["log σ²", "Linear(512→256)"]),
         path([(mu, 894), (mu, 920)], arrow=False),
         path([(log_var, 894), (log_var, 920)], arrow=False),
         path([(kl, 920), (z, 920)], arrow=False),
@@ -139,11 +139,11 @@ def latent():
         path([(z, 1024), (z, 1060)], arrow=False),
         panel(330, 1085, 330, 94, YELLOW),
         path([(z, 1060), (z, 1100)]),
-        box(350, 1100, 290, 64, ["Classifier", "Dense(256→C)"]),
+        box(350, 1100, 290, 64, ["Classifier", "Linear(256→C)"]),
         path([(z, 1164), (z, 1230)]),
         shape(z, 1197, "C"),
-        box(350, 1230, 290, 80, ["Output", "Class probabilities"], GRAY[0]),
-        text(z, 1335, ["Categorical cross-entropy"], size=16, fill=LABEL),
+        box(350, 1230, 290, 80, ["Output", "Class logits"], GRAY[0]),
+        text(z, 1335, ["Softmax cross-entropy"], size=16, fill=LABEL),
     ]
 
 
@@ -169,10 +169,10 @@ def decoder():
 
 
 def notes():
-    """Return the notes on class heads, training and activations."""
+    """Return the notes on class counts, training and activations."""
     lines = [
-        "C = 3 with sigmoid: neuron/glia, fetal/adult",
-        "C = 7 with softmax: Corces cell types",
+        "C = 3: neuron/glia, fetal/adult",
+        "C = 7: Corces cell types",
         "Loss weights 1 : 1 : 1. Adam, learning rate 10⁻⁴.",
         "Layers without an activation are linear.",
     ]
