@@ -52,18 +52,17 @@ def one_hot(sequence):
     Returns
     -------
     numpy.ndarray
-        Float32 array of shape ``(len(sequence), 4)``.
+        Float32 array of shape ``(4, len(sequence))``, channels first.
 
     Examples
     --------
     >>> one_hot("ACGTN")
-    array([[1.  , 0.  , 0.  , 0.  ],
-           [0.  , 1.  , 0.  , 0.  ],
-           [0.  , 0.  , 1.  , 0.  ],
-           [0.  , 0.  , 0.  , 1.  ],
-           [0.25, 0.25, 0.25, 0.25]], dtype=float32)
+    array([[1.  , 0.  , 0.  , 0.  , 0.25],
+           [0.  , 1.  , 0.  , 0.  , 0.25],
+           [0.  , 0.  , 1.  , 0.  , 0.25],
+           [0.  , 0.  , 0.  , 1.  , 0.25]], dtype=float32)
     """
-    return _ONE_HOT[np.frombuffer(sequence.encode(), dtype=np.uint8)]
+    return _ONE_HOT[np.frombuffer(sequence.encode(), dtype=np.uint8)].T
 
 
 def encode_regions(regions, genome=HG38):
@@ -79,13 +78,13 @@ def encode_regions(regions, genome=HG38):
     Returns
     -------
     numpy.ndarray
-        Float32 array of shape ``(len(regions), SEQUENCE_LENGTH, 4)``.
+        Float32 array of shape ``(len(regions), 4, SEQUENCE_LENGTH)``.
 
     Examples
     --------
     >>> regions = pl.DataFrame({"chrom": ["chr1"], "start": [181289], "stop": [181639]})
     >>> encode_regions(regions).shape
-    (1, 512, 4)
+    (1, 4, 512)
     """
     fasta = Fasta(genome, sequence_always_upper=True, as_raw=True)
     half = SEQUENCE_LENGTH // 2

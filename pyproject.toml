@@ -13,14 +13,15 @@ dependencies = [
     "poikilos @ git+https://github.com/ramirc0/poikilos",
     "polars>=2.1.0",
     "pyfaidx",
+    "safetensors",
     "scikit-learn",
-    "tensorflow[and-cuda]",
+    "torch",
     "umap-learn",
 ]
 
 [project.optional-dependencies]
 gpu = [
-    "cuml-cu12>=26.10",
+    "cuml-cu13>=26.10",
     # cuML caps numba<0.65, and numba 0.64 needs numpy<2.5.
     "numpy<2.5",
 ]

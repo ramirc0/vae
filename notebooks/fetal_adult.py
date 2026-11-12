@@ -7,22 +7,22 @@ app = marimo.App(width="medium")
 @app.cell
 def _():
     import marimo as mo
-    import numpy as np
     import poikilos as pk
-    from keras.callbacks import ModelCheckpoint
+    from safetensors.torch import load_file
 
     from vae.latent import plot_umap, umap_of
-    from vae.model import build_vae, compile_vae
+    from vae.model import VAE
     from vae.regions import encode_regions, read_labels
+    from vae.training import fit, latent_means_of
 
     pk.use()
     return (
-        ModelCheckpoint,
-        build_vae,
-        compile_vae,
+        VAE,
         encode_regions,
+        fit,
+        latent_means_of,
+        load_file,
         mo,
-        np,
         plot_umap,
         read_labels,
         umap_of,
@@ -34,7 +34,7 @@ def _(mo):
     mo.md("""
     # Fetal vs adult b-cCREs
 
-    VAE with a 3-class sigmoid head: fetal-specific, adult-specific and
+    VAE with a 3-class head: fetal-specific, adult-specific and
     shared b-cCREs. Port of `Fetal-Adult.ipynb` from Pratt et al. 2024.
     """)
     return
@@ -65,9 +65,9 @@ def _(CLASSES, labels):
 
 
 @app.cell
-def _(CLASSES, build_vae, compile_vae):
-    vae_model = compile_vae(build_vae(n_classes=len(CLASSES), activation="sigmoid"))
-    vae_model.summary()
+def _(CLASSES, VAE):
+    vae_model = VAE(n_classes=len(CLASSES))
+    vae_model
     return (vae_model,)
 
 
@@ -86,33 +86,25 @@ def _(mo):
 
 
 @app.cell
-def _(CHECKPOINTS, CLASSES, ModelCheckpoint, X, labels, np, train_button, vae_model):
-    if train_button.value:
-        CHECKPOINTS.mkdir(parents=True, exist_ok=True)
-        vae_model.fit(
+def _(CHECKPOINTS, CLASSES, RESULTS, X, fit, labels, mo, train_button, vae_model):
+    if train_button.value or "train" in mo.cli_args():
+        history = fit(
+            vae_model,
             X,
-            {
-                "decoder": X,
-                "kl_div": np.zeros((len(X), 1)),
-                "classifier": labels.select(CLASSES).to_numpy(),
-            },
+            labels.select(CLASSES).to_numpy(),
             epochs=20,
-            validation_split=0.1,
-            callbacks=[
-                ModelCheckpoint(
-                    str(CHECKPOINTS / "{epoch:02d}.weights.h5"), save_weights_only=True
-                )
-            ],
+            checkpoints=CHECKPOINTS,
         )
-    weights = CHECKPOINTS / "14.weights.h5"
+        history.write_csv(RESULTS / "history.csv")
+    weights = CHECKPOINTS / "14.safetensors"
     return (weights,)
 
 
 @app.cell
-def _(X, mo, vae_model, weights):
+def _(X, latent_means_of, load_file, mo, vae_model, weights):
     mo.stop(not weights.exists(), mo.md(f"No checkpoint at `{weights}`. Train first."))
-    vae_model.load_weights(weights)
-    latent_means = vae_model.predict(X)["z_mu"]
+    vae_model.load_state_dict(load_file(weights))
+    latent_means = latent_means_of(vae_model, X)
     return (latent_means,)
 
 
