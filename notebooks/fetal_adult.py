@@ -113,6 +113,7 @@ def _(
             labels.select(CLASSES).to_numpy(),
             epochs=30,
             checkpoints=CHECKPOINTS,
+            compile="compile" in mo.cli_args(),
         )
         history.write_csv(RESULTS / "history.csv")
     else:

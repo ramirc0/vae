@@ -2,6 +2,6 @@
 edit notebook:
     uv run --extra gpu marimo edit {{ notebook }}
 
-# Run a notebook top to bottom as a script. Add `--train` to fit the model first.
+# Run a notebook top to bottom as a script. Add `--train` to fit the model first, and `--compile` to compile it.
 run notebook *args:
     uv run --extra gpu python {{ notebook }} {{ args }}
