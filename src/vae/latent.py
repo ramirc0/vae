@@ -3,7 +3,9 @@
 from importlib.util import find_spec
 
 import matplotlib.pyplot as plt
+import numpy as np
 import poikilos as pk
+from matplotlib.lines import Line2D
 from sklearn.decomposition import PCA
 
 
@@ -53,9 +55,9 @@ def umap_of(latent_means, n_components=64):
 def plot_umap(embedding, labels, colors, path, axes=True):
     """Scatter a 2D embedding, one color per class, and save it.
 
-    A region in several classes is drawn once per class, in the order of
-    `colors`, so later classes cover earlier ones. Apply a poikilos theme
-    with ``pk.use()`` first.
+    A region in several classes is drawn once per class. Points are drawn
+    in a fixed random order, so no class covers the others. Apply a
+    poikilos theme with ``pk.use()`` first.
 
     Parameters
     ----------
@@ -81,24 +83,28 @@ def plot_umap(embedding, labels, colors, path, axes=True):
     >>> labels = pl.DataFrame({"a": [1, 0], "b": [0, 1]})
     >>> with tempfile.TemporaryDirectory() as tmp:
     ...     fig = plot_umap(np.eye(2), labels, {"a": "#FF0000", "b": "#0000FF"}, f"{tmp}/u")
-    >>> len(fig.axes[0].collections)
+    >>> len(fig.axes[0].collections[0].get_offsets())
     2
     """
+    rows = [np.flatnonzero(labels[name].to_numpy() == 1) for name in colors]
+    point_colors = np.repeat(list(colors.values()), [len(r) for r in rows])
+    order = np.random.default_rng(0).permutation(len(point_colors))
     fig, ax = plt.subplots(figsize=(5, 5))
-    for name, color in colors.items():
-        members = labels[name].to_numpy() == 1
-        ax.scatter(
-            *embedding[members].T,
-            s=0.5,
-            c=color,
-            alpha=0.5,
-            linewidths=0,
-            label=name,
-            rasterized=True,
-        )
+    ax.scatter(
+        *embedding[np.concatenate(rows)[order]].T,
+        s=2,
+        c=point_colors[order],
+        alpha=0.6,
+        linewidths=0,
+        rasterized=True,
+    )
     if axes:
         ax.set(xlabel="UMAP 1", ylabel="UMAP 2")
-        ax.legend(loc="upper left", bbox_to_anchor=(1, 1), markerscale=4)
+        handles = [
+            Line2D([], [], linestyle="", marker="o", color=color)
+            for color in colors.values()
+        ]
+        ax.legend(handles, colors, loc="upper left", bbox_to_anchor=(1, 1))
         pk.fit_legend(fig)
         pk.despine(ax, offset=7.5)
     else:
